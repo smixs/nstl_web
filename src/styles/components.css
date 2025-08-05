@@ -2,7 +2,10 @@
 
 /* Cards */
 .card-hover {
-  @apply transition-all duration-300 hover:shadow-md hover:-translate-y-1;
+  @apply transition-all duration-300;
+}
+.card-hover:hover {
+  @apply shadow-md -translate-y-1;
 }
 
 /* Buttons */

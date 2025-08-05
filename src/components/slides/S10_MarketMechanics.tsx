@@ -213,22 +213,20 @@ export default function S10_MarketMechanics() {
           </Card>
         </div>
 
-        {/* Success Formula */}
-        <div className="mt-8 bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-6 max-w-4xl mx-auto">
-          <div className="flex items-center justify-center space-x-3">
-            <FaLightbulb className="w-6 h-6 text-yellow-500" />
-            <p className="text-center text-base font-medium text-gray-900">
-              Формула успеха: Видео + UGC + Диалог + Игра + Ритм + Saves = ER 3%+
-            </p>
-          </div>
-        </div>
-
-        {/* Bottom Conclusion */}
-        <div className="mt-8">
-          <div className="bg-gray-50 rounded-2xl px-8 py-6 shadow-sm max-w-4xl mx-auto">
-            <p className="text-center text-base font-medium text-gray-900">
-              Каждая механика усиливает другую — важна комплексная реализация
-            </p>
+        {/* Success Formula & Implementation */}
+        <div className="mt-8 bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-6 max-w-5xl mx-auto">
+          <div className="space-y-4">
+            <div className="flex items-center justify-center space-x-3">
+              <FaLightbulb className="w-6 h-6 text-yellow-500" />
+              <p className="text-center text-base font-medium text-gray-900">
+                Формула успеха: Видео + UGC + Диалог + Игра + Ритм + Saves = ER 3%+
+              </p>
+            </div>
+            <div className="border-t border-gray-200 pt-4">
+              <p className="text-center text-sm text-gray-700">
+                Каждая механика усиливает другую — важна комплексная реализация
+              </p>
+            </div>
           </div>
         </div>
       </div>

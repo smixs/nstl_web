@@ -181,17 +181,3 @@ p {
     print-color-adjust: exact;
   }
 }
-
-/* === shrink-to-fit для печати === */
-@media print {
-  @page { size: A4; margin: 0; }   /* лист A4, поля убраны */
-
-  html {                     /* сжимаем всё содержимое */
-    zoom: 70%;               /* 70 % = как раз вписывается по ширине */
-  }
-
-  .slide {                   /* один слайд — одна страница */
-    page-break-after: always;
-    page-break-inside: avoid;
-  }
-}
