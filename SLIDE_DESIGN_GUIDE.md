@@ -14,16 +14,7 @@ import { Badge } from '@/components/ui/badge'
 export default function S##_SlideName() {
   return (
     <SlideWrapper>
-      {/* Background Pattern/Image - ALWAYS z-0 */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          // Background styles with low opacity (0.03-0.1)
-        }}
-      />
-      
-      {/* Content Container - ALWAYS z-10 */}
-      <div className="relative z-10 flex flex-col h-full">
+      <div className="flex flex-col h-full">
         {/* Content here */}
       </div>
     </SlideWrapper>
@@ -31,10 +22,28 @@ export default function S##_SlideName() {
 }
 ```
 
+**Note**: Background patterns are now DISCOURAGED. Keep slides simple and clean without backgrounds.
+
 ### 2. Background Rules
 
-#### Pattern Types:
-1. **Gradient Background** (S02_MainProblem)
+#### ⚠️ CRITICAL UPDATE (2025-08-05):
+**AVOID using backgrounds with `transparent` keyword in gradients!** This can cause PNG checkerboard pattern artifacts on some displays.
+
+#### Recommended Approach:
+1. **NO BACKGROUND (PREFERRED)** - Keep slides simple and clean
+   ```tsx
+   export default function S##_SlideName() {
+     return (
+       <SlideWrapper>
+         <div className="flex flex-col h-full">
+           {/* Content directly without background */}
+         </div>
+       </SlideWrapper>
+     )
+   }
+   ```
+
+2. **Solid Gradient Background (IF NEEDED)**
    ```tsx
    style={{
      backgroundImage: 'linear-gradient(135deg, #0066CC 0%, #FFE6F0 100%)',
@@ -42,36 +51,20 @@ export default function S##_SlideName() {
    }}
    ```
 
-2. **Radial Gradient Pattern** (S01_Title, S05_UniqueAdvantage)
-   ```tsx
-   style={{
-     backgroundImage: `
-       radial-gradient(circle at 20% 50%, rgba(0, 102, 204, 0.1) 0%, transparent 50%),
-       radial-gradient(circle at 80% 80%, rgba(255, 230, 240, 0.2) 0%, transparent 50%)
-     `
-   }}
-   ```
+3. **Radial Gradient (USE WITH CAUTION)**
+   - Replace `transparent` with specific color values
+   - Use rgba with full opacity instead of transparent keyword
 
-3. **Geometric Pattern** (S13_Kabrita)
-   ```tsx
-   style={{
-     backgroundImage: `
-       linear-gradient(45deg, rgba(34, 197, 94, 0.03) 25%, transparent 25%),
-       linear-gradient(-45deg, rgba(34, 197, 94, 0.03) 25%, transparent 25%)
-     `,
-     backgroundSize: '20px 20px'
-   }}
-   ```
-
-4. **Image Background** (S03_ProblemDetails)
-   ```tsx
-   style={{
-     backgroundImage: 'url(/images/background.avif)',
-     backgroundSize: 'cover',
-     backgroundPosition: 'center',
-     opacity: 0.1
-   }}
-   ```
+#### Deprecated Patterns (DO NOT USE):
+❌ **Geometric Pattern with transparent** - Creates checkerboard artifacts
+```tsx
+// BAD - Do not use!
+style={{
+  backgroundImage: `
+    linear-gradient(45deg, rgba(34, 197, 94, 0.03) 25%, transparent 25%),
+  `
+}}
+```
 
 **IMPORTANT**: Background opacity MUST be between 0.03-0.1 to not interfere with content readability!
 

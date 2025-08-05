@@ -5,17 +5,17 @@ import { Badge } from '@/components/ui/badge'
 import { HiChartBar, HiCalendar, HiCheckCircle, HiXCircle } from 'react-icons/hi2'
 import { FaChartLine, FaRegCommentDots } from 'react-icons/fa'
 
-export default function S13_Kabrita() {
+export default function S17_Nuppi() {
   return (
     <SlideWrapper>
       <div className="flex flex-col h-full">
         {/* Заголовок */}
         <div className="text-center mb-6 flex-shrink-0">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            KABRITA
+            NUPPI
           </h2>
           <p className="text-lg text-gray-600">
-            @kabrita.uzbekistan
+            @nuppi.uz
           </p>
         </div>
 
@@ -33,28 +33,28 @@ export default function S13_Kabrita() {
                     <HiChartBar className="w-4 h-4 text-gray-500" />
                     <span className="text-gray-600">Подписчики</span>
                   </div>
-                  <span className="font-bold">28,719</span>
+                  <span className="font-bold">6,555</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <FaChartLine className="w-4 h-4 text-gray-500" />
                     <span className="text-gray-600">ER</span>
                   </div>
-                  <span className="font-bold text-green-600">2.21%</span>
+                  <span className="font-bold text-red-600">0.18%</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <HiCalendar className="w-4 h-4 text-gray-500" />
                     <span className="text-gray-600">Частота</span>
                   </div>
-                  <span className="font-bold">0.4 поста/нед</span>
+                  <span className="font-bold">3.4 поста/нед</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <FaRegCommentDots className="w-4 h-4 text-gray-500" />
                     <span className="text-gray-600">Comment Rate</span>
                   </div>
-                  <span className="font-bold">84%</span>
+                  <span className="font-bold">26%</span>
                 </div>
               </CardContent>
             </Card>
@@ -65,7 +65,7 @@ export default function S13_Kabrita() {
               </CardHeader>
               <CardContent className="flex items-center h-full">
                 <p className="text-sm italic">
-                  "Премиальная смесь на козьем молоке для детей с чувствительным пищеварением"
+                  "Турецкий инновационный бренд"
                 </p>
               </CardContent>
             </Card>
@@ -74,8 +74,8 @@ export default function S13_Kabrita() {
           {/* Средняя колонка - скриншот */}
           <div className="h-full">
             <ImagePlaceholder
-              src="/images/kabrita-instagram.jpg"
-              alt="Скриншот Instagram страницы Kabrita"
+              src="/images/nuppi-instagram.jpg"
+              alt="Скриншот Instagram страницы Nuppi"
               aspectRatio="3/4"
               className="rounded-lg shadow-md h-full object-cover"
             />
@@ -93,15 +93,11 @@ export default function S13_Kabrita() {
               <CardContent className="space-y-2">
                 <div className="flex items-start space-x-2">
                   <span className="text-green-600">•</span>
-                  <p className="text-sm">Comment Rate 84% — рекордная дискуссионность</p>
+                  <p className="text-sm">Билингвальный контент</p>
                 </div>
                 <div className="flex items-start space-x-2">
                   <span className="text-green-600">•</span>
-                  <p className="text-sm">Короткие тексты (583 симв.) — легко читать</p>
-                </div>
-                <div className="flex items-start space-x-2">
-                  <span className="text-green-600">•</span>
-                  <p className="text-sm">Фокус на конкретных проблемах</p>
+                  <p className="text-sm">Визуальная подача информации</p>
                 </div>
               </CardContent>
             </Card>
@@ -116,15 +112,15 @@ export default function S13_Kabrita() {
               <CardContent className="space-y-2">
                 <div className="flex items-start space-x-2">
                   <span className="text-pink-600">•</span>
-                  <p className="text-sm">Крайне низкая частота постов</p>
+                  <p className="text-sm">Самая высокая частота → самый низкий ER</p>
                 </div>
                 <div className="flex items-start space-x-2">
                   <span className="text-pink-600">•</span>
-                  <p className="text-sm">CTA снижают вовлеченность на -69%</p>
+                  <p className="text-sm">CTA убивают вовлеченность (-70%)</p>
                 </div>
                 <div className="flex items-start space-x-2">
                   <span className="text-pink-600">•</span>
-                  <p className="text-sm">Нет системности в публикациях</p>
+                  <p className="text-sm">Контент как из медицинского учебника</p>
                 </div>
               </CardContent>
             </Card>
@@ -137,7 +133,7 @@ export default function S13_Kabrita() {
             <div className="flex items-center space-x-4">
               <Badge className="bg-blue-200 text-blue-700 px-4 py-2">Стратегия</Badge>
               <p className="text-base font-medium text-gray-900">
-                Создание "голубого океана" — монополия на нишу козьего молока
+                "Quantity over quality" — заваливание аудитории контентом
               </p>
             </div>
           </div>

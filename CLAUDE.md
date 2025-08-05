@@ -241,9 +241,14 @@ function App() {
 
 **⚠️ IMPORTANT**: When creating new slides, you MUST follow the detailed design guide in `SLIDE_DESIGN_GUIDE.md`. 
 
+**CRITICAL UPDATE (2025-08-05)**: 
+- **NO BACKGROUNDS on slides** - Keep slides simple and clean
+- Avoid using `transparent` keyword in gradients (causes PNG checkerboard artifacts)
+- Follow the principle: DRY, KISS, YAGNI - simpler is better
+
 This guide includes:
 - Component structure templates with exact code patterns
-- Background patterns (gradients, radial, geometric, images)
+- ~~Background patterns~~ (DEPRECATED - use no backgrounds)
 - Icon system using React Icons (hi2, hi, fa)
 - Color scheme (blue-600, green-600, red-600, etc.)
 - Typography hierarchy
