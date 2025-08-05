@@ -1,4 +1,5 @@
 import S01_Title from './S01_Title'
+import S01_Block1Divider from './S01_Block1Divider'
 import S02_MainProblem from './S02_MainProblem'
 import S03_ProblemDetails from './S03_ProblemDetails'
 import S04_WHOCodeRedZone from './S04_WHOCodeRedZone'
@@ -19,6 +20,7 @@ import S18_FrutoNyanya from './S18_FrutoNyanya'
 
 export const slides = [
   S01_Title,
+  S01_Block1Divider,
   S02_MainProblem,
   S03_ProblemDetails,
   S04_WHOCodeRedZone,
@@ -40,6 +42,7 @@ export const slides = [
 
 export const slideNames = [
   'Титульный слайд',
+  'Блок 1: Проблема и контекст',
   'Главная проблема',
   'Детализация проблемы',
   'Красная зона WHO Code',

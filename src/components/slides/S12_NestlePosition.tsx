@@ -1,166 +1,144 @@
 import SlideWrapper from '@/components/SlideWrapper'
+import ImagePlaceholder from '@/components/ImagePlaceholder'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { HiArrowRight, HiShoppingBag, HiHeart } from 'react-icons/hi2'
-import { FaUserMd, FaHandHoldingHeart, FaCompass } from 'react-icons/fa'
+import { HiOutlineChartBar, HiOutlineUsers, HiOutlineChat, HiOutlineShieldCheck } from 'react-icons/hi2'
+import { FaChartLine, FaVideo, FaLanguage, FaShieldAlt, FaExclamationTriangle, FaUsers, FaRegLightbulb, FaBrain, FaBalanceScale, FaChartPie } from 'react-icons/fa'
 
 export default function S12_NestlePosition() {
   return (
     <SlideWrapper>
-      <div className="relative z-10 flex flex-col h-full">
+      <div className="flex flex-col h-full">
         {/* Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-6">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            Позиция Nestle: От витрины к советнику
+            Анализ собственного аккаунта: NESTLE BABY & ME
           </h2>
-          <p className="text-lg text-gray-600">
-            Трансформация роли бренда в жизни семей
-          </p>
         </div>
 
-        {/* Transformation Journey */}
-        <div className="max-w-6xl mx-auto mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-            {/* From: Product Showcase */}
-            <Card className="hover:shadow-sm transition-all duration-300 border-2 border-gray-300">
-              <CardHeader className="pb-4">
-                <div className="icon-container-info mb-4">
-                  <HiShoppingBag className="w-7 h-7 text-gray-600" />
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+          {/* Left Column - Instagram Preview */}
+          <div>
+            <ImagePlaceholder 
+              src="/competitors/nestle.webp"
+              alt="Nestle Baby & Me Instagram Profile"
+              aspectRatio="3/4"
+              className="w-full max-w-sm mx-auto shadow-lg"
+            />
+          </div>
+
+          {/* Right Column - Metrics and Analysis */}
+          <div className="space-y-4">
+            {/* Key Metrics */}
+            <div className="bg-gradient-to-r from-blue-50 to-pink-50 rounded-xl p-4">
+              <div className="flex items-center gap-2 mb-3">
+                <HiOutlineChartBar className="w-5 h-5 text-blue-600" />
+                <h3 className="text-base font-semibold">Ключевые метрики (22 месяца, 100 постов)</h3>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="text-center">
+                  <p className="text-xl font-bold text-blue-600">46,109</p>
+                  <p className="text-xs text-gray-600">Подписчики</p>
+                  <Badge variant="secondary" className="mt-1 text-xs">лидер рынка</Badge>
                 </div>
-                <CardTitle className="text-lg">Было: Витрина продуктов</CardTitle>
-                <Badge variant="outline" className="mt-2">ER: 1.20%</Badge>
+                <div className="text-center">
+                  <p className="text-xl font-bold text-gray-700">1.20%</p>
+                  <p className="text-xs text-gray-600">ER</p>
+                  <Badge variant="outline" className="mt-1 text-xs">3-е место</Badge>
+                </div>
+                <div className="text-center">
+                  <p className="text-xl font-bold text-green-600">78%</p>
+                  <p className="text-xs text-gray-600">Comment Rate</p>
+                  <Badge variant="secondary" className="mt-1 text-xs">высокое доверие</Badge>
+                </div>
+                <div className="text-center">
+                  <p className="text-xl font-bold text-blue-600">90%</p>
+                  <p className="text-xs text-gray-600">WHO Compliance</p>
+                  <Badge variant="secondary" className="mt-1 text-xs">преимущество</Badge>
+                </div>
+              </div>
+            </div>
+
+            {/* Strengths */}
+            <Card className="border-green-200 bg-green-50/50">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-base flex items-center gap-2">
+                  <FaShieldAlt className="text-green-600 w-4 h-4" />
+                  Сильные стороны
+                </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="space-y-2">
-                  <div className="flex items-start space-x-2">
-                    <span className="text-gray-500">•</span>
-                    <p className="text-sm text-gray-600">Фокус на характеристиках</p>
+              <CardContent className="space-y-2 text-sm">
+                <div className="flex items-start gap-2">
+                  <FaVideo className="text-green-600 mt-0.5 flex-shrink-0 w-3 h-3" />
+                  <div>
+                    <span className="font-semibold">Видео-контент:</span>
+                    <span className="text-xs text-gray-600 block">85% успешных постов = Video/Reel (+123.7% прироста)</span>
                   </div>
-                  <div className="flex items-start space-x-2">
-                    <span className="text-gray-500">•</span>
-                    <p className="text-sm text-gray-600">Односторонняя коммуникация</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <FaChartLine className="text-green-600 mt-0.5 flex-shrink-0 w-3 h-3" />
+                  <div>
+                    <span className="font-semibold">Product Expertise:</span>
+                    <span className="text-xs text-gray-600 block">самый эффективный контент (726.5 средняя вовлеченность)</span>
                   </div>
-                  <div className="flex items-start space-x-2">
-                    <span className="text-gray-500">•</span>
-                    <p className="text-sm text-gray-600">Корпоративный язык</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <FaLanguage className="text-green-600 mt-0.5 flex-shrink-0 w-3 h-3" />
+                  <div>
+                    <span className="font-semibold">Билингвальность:</span>
+                    <span className="text-xs text-gray-600 block">60% постов на двух языках</span>
                   </div>
-                  <div className="flex items-start space-x-2">
-                    <span className="text-gray-500">•</span>
-                    <p className="text-sm text-gray-600">Дистанция с аудиторией</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <FaShieldAlt className="text-green-600 mt-0.5 flex-shrink-0 w-3 h-3" />
+                  <div>
+                    <span className="font-semibold">Высокое доверие:</span>
+                    <span className="text-xs text-gray-600 block">подтверждается Comment Rate 78%</span>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Arrow */}
-            <div className="flex justify-center items-center py-8 md:py-0">
-              <div className="bg-gradient-to-r from-blue-100 to-pink-100 rounded-full p-4">
-                <HiArrowRight className="w-8 h-8 text-blue-600" />
-              </div>
-            </div>
-
-            {/* To: Trusted Advisor */}
-            <Card className="hover:shadow-sm transition-all duration-300 border-2 border-blue-400">
-              <CardHeader className="pb-4">
-                <div className="icon-container-primary mb-4">
-                  <FaUserMd className="w-7 h-7 icon-primary" />
-                </div>
-                <CardTitle className="text-lg">Стало: Доверенный советник</CardTitle>
-                <Badge variant="default" className="mt-2">Цель ER: 1.80%</Badge>
+            {/* Growth Points */}
+            <Card className="border-orange-200 bg-orange-50/50">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-base flex items-center gap-2">
+                  <FaExclamationTriangle className="text-orange-600 w-4 h-4" />
+                  Точки роста
+                </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="space-y-2">
-                  <div className="flex items-start space-x-2">
-                    <span className="text-blue-600">✓</span>
-                    <p className="text-sm font-medium">Фокус на решениях</p>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <span className="text-blue-600">✓</span>
-                    <p className="text-sm font-medium">Диалог и поддержка</p>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <span className="text-blue-600">✓</span>
-                    <p className="text-sm font-medium">Язык заботы</p>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <span className="text-blue-600">✓</span>
-                    <p className="text-sm font-medium">Часть сообщества</p>
-                  </div>
+              <CardContent className="space-y-2 text-sm">
+                <div>
+                  <span className="font-semibold">Низкая интеграция брендов:</span>
+                  <span className="text-xs text-gray-600 block">только 13% постов объединяют NAN + Baby&Me</span>
+                </div>
+                <div>
+                  <span className="font-semibold">Недоиспользование науки:</span>
+                  <span className="text-xs text-gray-600 block">только 3% scientific authority контента</span>
+                </div>
+                <div>
+                  <span className="font-semibold">Нестабильность:</span>
+                  <span className="text-xs text-gray-600 block">Consistency Score -0.23</span>
+                </div>
+                <div>
+                  <span className="font-semibold">Перекос контента:</span>
+                  <span className="text-xs text-gray-600 block">доминирует менее эффективный parenting support (60%)</span>
                 </div>
               </CardContent>
             </Card>
           </div>
         </div>
 
-        {/* New Role Components */}
-        <div className="bg-gradient-to-r from-blue-50 to-pink-50 rounded-2xl p-6 max-w-5xl mx-auto mb-8">
-          <h3 className="text-lg font-semibold text-center mb-6">Компоненты новой роли</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div className="text-center">
-              <div className="icon-container-primary mb-3 mx-auto">
-                <FaCompass className="w-5 h-5 icon-primary" />
-              </div>
-              <p className="text-sm font-medium">Навигатор</p>
-              <p className="text-xs text-gray-600 mt-1">
-                Помогаем выбрать путь
-              </p>
+        {/* Main Conclusion */}
+        <div className="mt-auto">
+          <div className="bg-gray-100 rounded-xl p-4 text-center">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <FaRegLightbulb className="text-orange-500 w-5 h-5" />
+              <p className="text-base font-semibold text-gray-900">Главный вывод</p>
             </div>
-            
-            <div className="text-center">
-              <div className="icon-container-secondary mb-3 mx-auto">
-                <HiHeart className="w-5 h-5 icon-secondary" />
-              </div>
-              <p className="text-sm font-medium">Поддержка</p>
-              <p className="text-xs text-gray-600 mt-1">
-                Всегда рядом 24/7
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="icon-container-success mb-3 mx-auto">
-                <FaHandHoldingHeart className="w-5 h-5 icon-success" />
-              </div>
-              <p className="text-sm font-medium">Опыт</p>
-              <p className="text-xs text-gray-600 mt-1">
-                25 лет экспертизы
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="icon-container-warning mb-3 mx-auto">
-                <FaUserMd className="w-5 h-5 icon-warning" />
-              </div>
-              <p className="text-sm font-medium">Эксперт</p>
-              <p className="text-xs text-gray-600 mt-1">
-                Научная база знаний
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Key Changes */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-          <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
-            <p className="text-sm font-semibold text-gray-900 mb-1">Контент</p>
-            <p className="text-xs text-gray-600">80% советы → 20% продукт</p>
-          </div>
-          <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
-            <p className="text-sm font-semibold text-gray-900 mb-1">Тон</p>
-            <p className="text-xs text-gray-600">Мама-подруга, не корпорация</p>
-          </div>
-          <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
-            <p className="text-sm font-semibold text-gray-900 mb-1">Цель</p>
-            <p className="text-xs text-gray-600">Помощь, не продажа</p>
-          </div>
-        </div>
-
-        {/* Bottom Conclusion */}
-        <div className="mt-auto pt-8">
-          <div className="bg-gray-50 rounded-2xl px-8 py-6 shadow-sm max-w-4xl mx-auto">
-            <p className="text-center text-base font-medium text-gray-900">
-              <FaHandHoldingHeart className="w-5 h-5 inline mr-2 text-blue-600" />
-              Baby & Me — не бренд, который продает. Это друг, который помогает растить
+            <p className="text-sm text-gray-700">
+              Крупнейшая аудитория + высокое доверие, но недоиспользование научного потенциала
             </p>
           </div>
         </div>
