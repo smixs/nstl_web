@@ -24,7 +24,7 @@ export default function S05_UniqueAdvantage() {
           {/* Левая часть - карточки поколений */}
           <div className="space-y-6">
             {/* Поколение 1 */}
-            <Card className="hover:shadow-md transition-all duration-300">
+            <Card className="hover:shadow-sm transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
                   <div className="icon-container-primary">
@@ -41,7 +41,7 @@ export default function S05_UniqueAdvantage() {
             </Card>
 
             {/* Поколение 2 */}
-            <Card className="hover:shadow-md transition-all duration-300">
+            <Card className="hover:shadow-sm transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
                   <div className="icon-container-success">
@@ -58,7 +58,7 @@ export default function S05_UniqueAdvantage() {
             </Card>
 
             {/* Поколение 3 */}
-            <Card className="hover:shadow-md transition-all duration-300">
+            <Card className="hover:shadow-sm transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
                   <div className="icon-container-secondary">

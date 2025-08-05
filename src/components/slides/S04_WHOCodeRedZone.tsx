@@ -20,7 +20,7 @@ export default function S04_WHOCodeRedZone() {
         {/* Карточки */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {/* Запрещено */}
-          <Card className="hover:shadow-md transition-all duration-300 border-red-100">
+          <Card className="hover:shadow-sm transition-all duration-300 border-red-100">
             <CardHeader className="pb-4">
               <div className="icon-container-warning mb-4">
                 <HiXCircle className="w-7 h-7 icon-warning" />
@@ -45,7 +45,7 @@ export default function S04_WHOCodeRedZone() {
           </Card>
 
           {/* Разрешено */}
-          <Card className="hover:shadow-md transition-all duration-300 border-green-100">
+          <Card className="hover:shadow-sm transition-all duration-300 border-green-100">
             <CardHeader className="pb-4">
               <div className="icon-container-success mb-4">
                 <HiCheckCircle className="w-7 h-7 icon-success" />
@@ -70,7 +70,7 @@ export default function S04_WHOCodeRedZone() {
           </Card>
 
           {/* Новое */}
-          <Card className="hover:shadow-md transition-all duration-300 border-blue-100">
+          <Card className="hover:shadow-sm transition-all duration-300 border-blue-100">
             <CardHeader className="pb-4">
               <div className="icon-container-primary mb-4">
                 <HiShieldCheck className="w-7 h-7 icon-primary" />

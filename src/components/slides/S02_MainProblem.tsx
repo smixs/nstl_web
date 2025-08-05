@@ -22,7 +22,7 @@ export default function S02_MainProblem() {
         {/* Карточки сравнения */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Nestle */}
-          <Card className="hover:shadow-md transition-all duration-300">
+          <Card className="hover:shadow-sm transition-all duration-300">
             <CardHeader className="pb-4">
               <div className="icon-container-primary mb-4">
                 <HiUsers className="w-7 h-7 icon-primary" />
@@ -62,7 +62,7 @@ export default function S02_MainProblem() {
           </Card>
 
           {/* Kabrita */}
-          <Card className="hover:shadow-md transition-all duration-300">
+          <Card className="hover:shadow-sm transition-all duration-300">
             <CardHeader className="pb-4">
               <div className="icon-container-success mb-4">
                 <FaChartLine className="w-7 h-7 icon-success" />

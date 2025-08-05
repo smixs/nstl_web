@@ -21,7 +21,7 @@ export default function S03_ProblemDetails() {
         {/* Карточки с проблемами */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {/* Карточка 1 - Низкий ER */}
-          <Card className="hover:shadow-md transition-all duration-300">
+          <Card className="hover:shadow-sm transition-all duration-300">
             <CardHeader className="pb-4">
               <div className="icon-container-secondary mb-4">
                 <HiTrendingDown className="w-7 h-7 icon-secondary" />
@@ -44,7 +44,7 @@ export default function S03_ProblemDetails() {
           </Card>
 
           {/* Карточка 2 - Массовая аудитория */}
-          <Card className="hover:shadow-md transition-all duration-300">
+          <Card className="hover:shadow-sm transition-all duration-300">
             <CardHeader className="pb-4">
               <div className="icon-container-warning mb-4">
                 <HiUserGroup className="w-7 h-7 icon-warning" />
@@ -67,7 +67,7 @@ export default function S03_ProblemDetails() {
           </Card>
 
           {/* Карточка 3 - Низкий LTV */}
-          <Card className="hover:shadow-md transition-all duration-300">
+          <Card className="hover:shadow-sm transition-all duration-300">
             <CardHeader className="pb-4">
               <div className="icon-container-info mb-4">
                 <HiChatAlt2 className="w-7 h-7 icon-info" />
