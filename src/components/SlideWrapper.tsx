@@ -1,20 +1,28 @@
-import { ReactNode } from 'react'
+import { ReactNode, useContext } from 'react'
 import { cn } from '@/lib/utils'
 import BackgroundShapes from '@/components/decorative/BackgroundShapes'
+import { useBackground } from '@/contexts/BackgroundContext'
+import { SlideIndexContext } from '@/App'
 
 interface SlideWrapperProps {
   children: ReactNode
   className?: string
   variant?: 'default' | 'gradient' | 'dark'
   showShapes?: boolean
+  disableRandomBackground?: boolean
 }
 
 export default function SlideWrapper({ 
   children, 
   className,
   variant = 'default',
-  showShapes = true 
+  showShapes = true,
+  disableRandomBackground = false 
 }: SlideWrapperProps) {
+  const slideIndex = useContext(SlideIndexContext)
+  const { getBackgroundForSlide } = useBackground()
+  const backgroundImage = getBackgroundForSlide(slideIndex)
+
   const variants = {
     default: 'bg-background-main text-text-primary',
     gradient: 'bg-gradient-to-br from-nestle-blue via-nestle-blue-pastel to-nestle-light-blue text-white',
@@ -27,6 +35,20 @@ export default function SlideWrapper({
       variants[variant],
       className
     )}>
+      {/* Random background image - only for default variant */}
+      {variant === 'default' && !disableRandomBackground && (
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            opacity: 0.15
+          }}
+        />
+      )}
+      
       {/* Background decorative shapes */}
       {showShapes && variant === 'default' && <BackgroundShapes />}
       

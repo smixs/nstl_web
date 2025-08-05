@@ -8,19 +8,7 @@ import { FaCrown } from 'react-icons/fa'
 export default function S05_UniqueAdvantage() {
   return (
     <SlideWrapper>
-      {/* Фоновый паттерн с кругами поколений */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `
-            radial-gradient(circle at 10% 20%, rgba(0, 102, 204, 0.04) 0%, transparent 40%),
-            radial-gradient(circle at 80% 40%, rgba(135, 206, 235, 0.04) 0%, transparent 40%),
-            radial-gradient(circle at 50% 80%, rgba(255, 192, 203, 0.04) 0%, transparent 40%)
-          `
-        }}
-      />
-      
-      <div className="relative z-10 flex flex-col h-full">
+      <div className="flex flex-col h-full">
         {/* Заголовок */}
         <div className="text-center mb-8">
           <h2 className="text-4xl md:text-5xl font-bold text-primary leading-tight">

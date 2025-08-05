@@ -1,7 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, createContext } from 'react'
 import { slides } from '@/components/slides'
 import ProgressBar from '@/components/ProgressBar'
 import { cn } from '@/lib/utils'
+import { BackgroundProvider } from '@/contexts/BackgroundContext'
+
+export const SlideIndexContext = createContext<number>(0)
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -44,31 +47,34 @@ function App() {
   }
 
   return (
-    <div className="presentation min-h-screen bg-white">
-      {/* Прогресс бар */}
-      <ProgressBar current={currentSlide} total={slides.length} />
-      
-      {/* Подсказка навигации на первом слайде */}
-      {currentSlide === 0 && (
-        <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-6 py-3 rounded-full text-sm print:hidden animate-pulse">
-          Используйте стрелки ← → или кликните для навигации
-        </div>
-      )}
+    <BackgroundProvider totalSlides={slides.length}>
+      <div className="presentation min-h-screen bg-white">
+        {/* Прогресс бар */}
+        <ProgressBar current={currentSlide} total={slides.length} />
+        
+        {/* Подсказка навигации на первом слайде */}
+        {currentSlide === 0 && (
+          <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-6 py-3 rounded-full text-sm print:hidden animate-pulse">
+            Используйте стрелки ← → или кликните для навигации
+          </div>
+        )}
 
-      {/* КРИТИЧНО: Все слайды в DOM для печати! */}
-      {slides.map((SlideComponent, index) => (
-        <div
-          key={index}
-          className={cn(
-            "slide w-full min-h-screen cursor-pointer",
-            currentSlide === index ? "block" : "hidden print:block"
-          )}
-          onClick={handleClick}
-        >
-          <SlideComponent />
-        </div>
-      ))}
-    </div>
+        {/* КРИТИЧНО: Все слайды в DOM для печати! */}
+        {slides.map((SlideComponent, index) => (
+          <SlideIndexContext.Provider key={index} value={index}>
+            <div
+              className={cn(
+                "slide w-full min-h-screen cursor-pointer",
+                currentSlide === index ? "block" : "hidden print:block"
+              )}
+              onClick={handleClick}
+            >
+              <SlideComponent />
+            </div>
+          </SlideIndexContext.Provider>
+        ))}
+      </div>
+    </BackgroundProvider>
   )
 }
 

@@ -7,18 +7,7 @@ import { HiTrendingDown, HiChatAlt2 } from 'react-icons/hi'
 export default function S03_ProblemDetails() {
   return (
     <SlideWrapper>
-      {/* Фоновое изображение */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: 'url(/images/baby-background.avif)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.1
-        }}
-      />
-      
-      <div className="relative z-10 flex flex-col h-full">
+      <div className="flex flex-col h-full">
         {/* Заголовок */}
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
