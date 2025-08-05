@@ -12,7 +12,7 @@ export default function S05_UniqueAdvantage() {
         {/* Заголовок */}
         <div className="text-center mb-8">
           <h2 className="text-4xl md:text-5xl font-bold text-primary leading-tight">
-            20 ЛЕТ В УЗБЕКИСТАНЕ
+            25 ЛЕТ В УЗБЕКИСТАНЕ
           </h2>
           <p className="text-lg text-gray-600 mt-2 font-light">
             Три поколения доверия
@@ -92,10 +92,10 @@ export default function S05_UniqueAdvantage() {
         </div>
 
         {/* Нижний акцент */}
-        <div className="text-center mt-8">
-          <div className="bg-gray-50 rounded-full px-8 py-4 shadow-sm">
-            <p className="text-sm font-medium text-primary">
-              💝 Единственный бренд, которому доверяют ВСЕ поколения семьи
+        <div className="mt-auto pt-8">
+          <div className="bg-gray-50 rounded-2xl px-8 py-6 shadow-sm max-w-4xl mx-auto">
+            <p className="text-center text-base font-medium text-gray-900">
+              Единственный бренд, которому доверяют ВСЕ поколения семьи
             </p>
           </div>
         </div>

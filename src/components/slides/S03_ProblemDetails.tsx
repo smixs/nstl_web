@@ -94,7 +94,7 @@ export default function S03_ProblemDetails() {
         <div className="mt-auto pt-8">
           <div className="bg-gray-50 rounded-2xl px-8 py-6 shadow-sm max-w-4xl mx-auto">
             <p className="text-center text-base font-medium text-gray-900">
-              📊 Основная проблема: контент не резонирует с аудиторией, 
+              Основная проблема: контент не резонирует с аудиторией, 
               не создает ценность и не вызывает желание взаимодействовать
             </p>
           </div>

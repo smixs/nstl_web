@@ -1,6 +1,7 @@
 import S01_Title from './S01_Title'
 import S02_MainProblem from './S02_MainProblem'
 import S03_ProblemDetails from './S03_ProblemDetails'
+import S04_WHOCodeRedZone from './S04_WHOCodeRedZone'
 import S05_UniqueAdvantage from './S05_UniqueAdvantage'
 import S13_Kabrita from './S13_Kabrita'
 import S14_Nutrilak from './S14_Nutrilak'
@@ -13,6 +14,7 @@ export const slides = [
   S01_Title,
   S02_MainProblem,
   S03_ProblemDetails,
+  S04_WHOCodeRedZone,
   S05_UniqueAdvantage,
   S13_Kabrita,
   S14_Nutrilak,
@@ -26,6 +28,7 @@ export const slideNames = [
   'Титульный слайд',
   'Главная проблема',
   'Детализация проблемы',
+  'Красная зона WHO Code',
   'Уникальное преимущество',
   'Профиль конкурента: Kabrita',
   'Профиль конкурента: Nutrilak',

@@ -1,22 +1,14 @@
 import SlideWrapper from '@/components/SlideWrapper'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { HiChartBar, HiUsers } from 'react-icons/hi2'
+import { HiUsers } from 'react-icons/hi2'
 import { FaChartLine } from 'react-icons/fa'
 
 export default function S02_MainProblem() {
   return (
     <SlideWrapper>
-      {/* Фоновое изображение */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: 'linear-gradient(135deg, #0066CC 0%, #FFE6F0 100%)',
-          opacity: 0.05
-        }}
-      />
-      
-      <div className="relative z-10 space-y-12">
+      <div className="flex flex-col h-full">
+        <div className="space-y-12">
         {/* Заголовок */}
         <div className="text-center animate-fadeIn">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-secondary">
@@ -111,12 +103,13 @@ export default function S02_MainProblem() {
         </div>
 
         {/* Вывод */}
-        <div className="text-center animate-slideUp animation-delay-600">
-          <div className="bg-gray-50 rounded-full px-10 py-5 shadow-sm">
-            <p className="text-sm md:text-base text-gray-900 font-medium">
-              🎯 Парадокс: больше подписчиков ≠ больше вовлеченности
+        <div className="mt-auto pt-8">
+          <div className="bg-gray-50 rounded-2xl px-8 py-6 shadow-sm max-w-4xl mx-auto">
+            <p className="text-center text-base font-medium text-gray-900">
+              Парадокс: больше подписчиков ≠ больше вовлеченности
             </p>
           </div>
+        </div>
         </div>
       </div>
     </SlideWrapper>
