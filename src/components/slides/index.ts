@@ -18,7 +18,12 @@ import S15_Agusha from './S15_Agusha'
 import S16_Nutrilon from './S16_Nutrilon'
 import S17_Nuppi from './S17_Nuppi'
 import S18_FrutoNyanya from './S18_FrutoNyanya'
+import S19_Ecommerce from './S19_Ecommerce'
 import S20_Block3Divider from './S20_Block3Divider'
+import S21_StrategicAdvantage from './S21_StrategicAdvantage'
+import S22_UniqueRTB from './S22_UniqueRTB'
+import S23_BigIdea from './S23_BigIdea'
+import S24_Positioning from './S24_Positioning'
 import S30_Block4Divider from './S30_Block4Divider'
 import S38_Block5Divider from './S38_Block5Divider'
 import S41_Block6Divider from './S41_Block6Divider'
@@ -44,7 +49,12 @@ export const slides = [
   S16_Nutrilon,
   S17_Nuppi,
   S18_FrutoNyanya,
+  S19_Ecommerce,
   S20_Block3Divider,
+  S21_StrategicAdvantage,
+  S22_UniqueRTB,
+  S23_BigIdea,
+  S24_Positioning,
   S30_Block4Divider,
   S38_Block5Divider,
   S41_Block6Divider,
@@ -71,7 +81,12 @@ export const slideNames = [
   'Профиль конкурента: Nutrilon',
   'Профиль конкурента: Nuppi',
   'Профиль конкурента: FrutoNyanya',
+  'E-commerce инсайты',
   'Блок 3: Стратегия решения',
+  'Стратегическое преимущество',
+  'Уникальное RTB',
+  'Big Idea',
+  'Позиционирование Baby&Me',
   'Блок 4: Тактическая реализация',
   'Блок 5: Безопасность и контроль',
   'Блок 6: Метрики и результаты',
