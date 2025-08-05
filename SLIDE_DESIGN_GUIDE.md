@@ -9,7 +9,7 @@ Every slide MUST follow this exact structure:
 import SlideWrapper from '@/components/SlideWrapper'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-// Import icons from react-icons
+// Import icons from react-icons (hi2, hi, fa)
 
 export default function S##_SlideName() {
   return (
@@ -18,7 +18,7 @@ export default function S##_SlideName() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          // Background styles with low opacity
+          // Background styles with low opacity (0.03-0.1)
         }}
       />
       
@@ -97,47 +97,56 @@ export default function S##_SlideName() {
 <p className="text-sm text-gray-500">Body text</p>
 ```
 
-### 4. Color System (Global CSS Variables)
+### 4. Color System (Working Implementation)
 
-**IMPORTANT**: All colors are defined as CSS variables in `/src/styles/variables.css`.
+**Color System Overview:**
+- Tailwind colors defined in `tailwind.config.js` (soft-blue, soft-pink, etc.)
+- CSS variables defined in `/src/styles/variables.css`
+- Utility classes defined in `/src/styles/color-utilities.css`
 
-**Semantic Color Classes:**
+**Semantic Color Classes (from color-utilities.css):**
 - Primary: `bg-primary`, `text-primary`, `icon-primary`
 - Secondary: `bg-secondary`, `text-secondary`, `icon-secondary`
 - Success: `bg-success`, `text-success`, `icon-success`
 - Warning: `bg-warning`, `text-warning`, `icon-warning`
 - Info: `bg-info`, `text-info`, `icon-info`
 
-**Icon Container Classes:**
+**Icon Container Classes (pre-defined):**
 ```tsx
 <div className="icon-container-primary mb-4">
   <IconName className="w-7 h-7 icon-primary" />
 </div>
 ```
 
-**Using CSS Variables with Tailwind:**
+**Badge Variants:**
 ```tsx
-// Direct variable usage
-<div className="bg-[var(--color-primary)] text-[var(--color-primary-dark)]">
-
-// Badge variants
-<Badge variant="default">Primary</Badge>
+<Badge variant="default">Default</Badge>
+<Badge variant="secondary">Secondary</Badge>
 <Badge variant="success">Success</Badge>
 <Badge variant="destructive">Error</Badge>
-
-// Gradients
-<div className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)]">
 ```
 
-**Badge Background Classes:**
-- `bg-primary-soft` - Light primary background
-- `bg-secondary-soft` - Light secondary background
-- `bg-success-soft` - Light success background
+**Working with Colors:**
+```tsx
+// Use semantic classes
+<h2 className="text-primary">Title</h2>
+
+// Use Tailwind gray scale
+<p className="text-gray-600">Subtitle</p>
+
+// Direct CSS variable usage (when needed)
+<div style={{ backgroundColor: 'var(--color-primary)' }}>
+
+// Badge backgrounds
+<Badge className="bg-primary-soft text-primary">Custom Badge</Badge>
+```
 
 **Text Colors:**
-- Primary: `text-[var(--color-text-primary)]`
-- Secondary: `text-gray-600`
-- Muted: `text-gray-500`
+- Headers: `text-gray-900`
+- Subtitles: `text-gray-600`
+- Muted text: `text-gray-500`
+- Primary accent: `text-primary`
+- Secondary accent: `text-secondary`
 
 ### 5. Icon System
 
@@ -150,15 +159,17 @@ export default function S##_SlideName() {
 
 **Icon Container Pattern:**
 ```tsx
-// Use predefined classes
+// Use predefined classes (RECOMMENDED)
 <div className="icon-container-primary mb-4">
   <IconName className="w-7 h-7 icon-primary" />
 </div>
 
-// Or manual pattern with CSS variables
-<div className="w-14 h-14 rounded-2xl bg-[var(--color-primary)] flex items-center justify-center shadow-md mb-4">
-  <IconName className="w-7 h-7 text-[var(--color-primary-dark)]" />
-</div>
+// Available container classes:
+// icon-container-primary
+// icon-container-secondary
+// icon-container-success
+// icon-container-warning
+// icon-container-info
 ```
 
 **Small Icons in Text:**
@@ -175,9 +186,9 @@ export default function S##_SlideName() {
 ```tsx
 <Card className="hover:shadow-md transition-all duration-300">
   <CardHeader className="pb-4">
-    {/* Icon container */}
-    <div className="w-14 h-14 rounded-2xl bg-[color]-600 flex items-center justify-center shadow-md mb-4">
-      <IconName className="w-7 h-7 text-white" />
+    {/* Use predefined icon container */}
+    <div className="icon-container-primary mb-4">
+      <IconName className="w-7 h-7 icon-primary" />
     </div>
     <CardTitle className="text-xl">Title</CardTitle>
   </CardHeader>
@@ -191,7 +202,13 @@ export default function S##_SlideName() {
 ```tsx
 <div className="flex items-center justify-between">
   <span className="text-gray-600">Label</span>
-  <Badge className="bg-[color]-100 text-[color]-700">Value</Badge>
+  <Badge variant="default">Value</Badge>
+</div>
+
+// or with custom color
+<div className="flex items-center justify-between">
+  <span className="text-gray-600">Metric</span>
+  <Badge className="bg-green-100 text-green-700">High</Badge>
 </div>
 ```
 
@@ -284,30 +301,56 @@ Available animations (already defined in CSS):
 ### 12. DO NOT:
 
 - ❌ Use emojis in titles or important text (only in conclusion boxes)
-- ❌ Use CSS variables for colors (use Tailwind classes)
 - ❌ Use shadow-lg (use shadow-md instead)
 - ❌ Use complex glass effects or backdrop filters
 - ❌ Use opacity higher than 0.1 for backgrounds
-- ❌ Forget to add z-index to background and content
+- ❌ Forget to add z-index to background and content (z-0 for bg, z-10 for content)
 - ❌ Mix different icon libraries in the same component
+- ❌ Use hard-coded colors - use existing utility classes or Tailwind colors
 
-### 13. Example Slide Template
+### 13. Working Slide Template (Based on Real Implementation)
 
 ```tsx
 import SlideWrapper from '@/components/SlideWrapper'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { HiChartBar, HiUsers } from 'react-icons/hi2'
+import { FaChartLine } from 'react-icons/fa'
 
-export default function S##_TemplateName() {
+export default function S##_SlideName() {
   return (
     <SlideWrapper>
-      {/* Background */}
+      {/* Background Pattern - choose one */}
+      
+      {/* Option 1: Gradient */}
       <div 
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: 'linear-gradient(135deg, #0066CC 0%, #FFE6F0 100%)',
           opacity: 0.05
+        }}
+      />
+      
+      {/* Option 2: Radial Gradients */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `
+            radial-gradient(circle at 20% 50%, rgba(0, 102, 204, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(255, 230, 240, 0.2) 0%, transparent 50%)
+          `
+        }}
+      />
+      
+      {/* Option 3: Geometric Pattern */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `
+            linear-gradient(45deg, rgba(34, 197, 94, 0.03) 25%, transparent 25%),
+            linear-gradient(-45deg, rgba(34, 197, 94, 0.03) 25%, transparent 25%)
+          `,
+          backgroundSize: '20px 20px'
         }}
       />
       
