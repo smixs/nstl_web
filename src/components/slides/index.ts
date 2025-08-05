@@ -6,6 +6,7 @@ import S04_WHOCodeRedZone from './S04_WHOCodeRedZone'
 import S05_UniqueAdvantage from './S05_UniqueAdvantage'
 import S06_TwoMothers from './S06_TwoMothers'
 import S07_CompetitiveLandscape from './S07_CompetitiveLandscape'
+import S07B_Block2Divider from './S07B_Block2Divider'
 import S08_MarketLandscape from './S08_MarketLandscape'
 import S09_LeadersAnatomy from './S09_LeadersAnatomy'
 import S10_MarketMechanics from './S10_MarketMechanics'
@@ -17,6 +18,10 @@ import S15_Agusha from './S15_Agusha'
 import S16_Nutrilon from './S16_Nutrilon'
 import S17_Nuppi from './S17_Nuppi'
 import S18_FrutoNyanya from './S18_FrutoNyanya'
+import S20_Block3Divider from './S20_Block3Divider'
+import S30_Block4Divider from './S30_Block4Divider'
+import S38_Block5Divider from './S38_Block5Divider'
+import S41_Block6Divider from './S41_Block6Divider'
 
 export const slides = [
   S01_Title,
@@ -27,6 +32,7 @@ export const slides = [
   S05_UniqueAdvantage,
   S06_TwoMothers,
   S07_CompetitiveLandscape,
+  S07B_Block2Divider,
   S08_MarketLandscape,
   S09_LeadersAnatomy,
   S10_MarketMechanics,
@@ -38,6 +44,10 @@ export const slides = [
   S16_Nutrilon,
   S17_Nuppi,
   S18_FrutoNyanya,
+  S20_Block3Divider,
+  S30_Block4Divider,
+  S38_Block5Divider,
+  S41_Block6Divider,
 ] as const
 
 export const slideNames = [
@@ -49,6 +59,7 @@ export const slideNames = [
   'Уникальное преимущество',
   'Две матери — два подхода',
   'Конкурентный ландшафт',
+  'Блок 2: Обзор рынка и конкурентов',
   'Рыночный ландшафт',
   'Анатомия лидеров',
   '5 работающих механик',
@@ -60,4 +71,8 @@ export const slideNames = [
   'Профиль конкурента: Nutrilon',
   'Профиль конкурента: Nuppi',
   'Профиль конкурента: FrutoNyanya',
+  'Блок 3: Стратегия решения',
+  'Блок 4: Тактическая реализация',
+  'Блок 5: Безопасность и контроль',
+  'Блок 6: Метрики и результаты',
 ] as const
