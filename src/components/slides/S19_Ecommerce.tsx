@@ -23,7 +23,7 @@ export default function S19_Ecommerce() {
         {/* Analysis Box */}
         <div className="bg-soft-blue/10 rounded-2xl p-6 mb-6 max-w-4xl mx-auto">
           <p className="text-base text-gray-700 font-medium">
-            <span className="font-bold text-gray-900">Анализ 500,000+ отзывов показал:</span>
+            <span className="font-bold text-gray-900">Анализ отзывов e-comm показал:</span>
           </p>
           <p className="text-lg text-gray-900 font-semibold mt-2">
             Восприятие продукта = Качество + Опыт получения

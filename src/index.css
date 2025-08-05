@@ -1,7 +1,44 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
 @import "./styles/variables.css";
 @import "./styles/color-utilities.css";
+
+/* Define custom colors for Tailwind CSS v4 */
+@theme {
+  /* Soft Pastel Colors */
+  --color-soft-blue: #A8D8EA;
+  --color-soft-pink: #FFAAA5;
+  --color-soft-yellow: #FFE5AD;
+  --color-soft-purple: #E6B5E8;
+  --color-soft-green: #B8E6B8;
+  --color-soft-orange: #FFD3B6;
+  
+  /* Darker versions for text/accents */
+  --color-blue-pastel: #7FC4E3;
+  --color-pink-pastel: #FF8B85;
+  --color-yellow-pastel: #FFD687;
+  --color-purple-pastel: #D99BDB;
+  --color-green-pastel: #93D993;
+  --color-orange-pastel: #FFC09F;
+  
+  /* Neutral colors */
+  --color-gray-50: #FAFAFA;
+  --color-gray-100: #F5F5F5;
+  --color-gray-200: #EEEEEE;
+  --color-gray-300: #E0E0E0;
+  --color-gray-400: #BDBDBD;
+  --color-gray-500: #9E9E9E;
+  --color-gray-600: #757575;
+  --color-gray-700: #616161;
+  --color-gray-800: #424242;
+  --color-gray-900: #212121;
+  
+  /* Legacy mappings for existing code */
+  --color-nestle-blue: #A8D8EA;
+  --color-baby-pink: #FFAAA5;
+  --color-success-green: #B8E6B8;
+  --color-danger-red: #FFAAA5;
+}
 
 /* Base styles */
 * {

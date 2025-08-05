@@ -1,16 +1,18 @@
 /* Component specific styles */
+@reference "../index.css";
 
 /* Cards */
 .card-hover {
   @apply transition-all duration-300;
 }
 .card-hover:hover {
-  @apply shadow-md -translate-y-1;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-0.25rem);
 }
 
 /* Buttons */
 .btn-primary {
-  @apply bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors;
+  @apply bg-nestle-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-pastel transition-colors;
 }
 
 /* Progress bar */
@@ -19,5 +21,5 @@
 }
 
 .progress-bar-fill {
-  @apply h-full bg-blue-600 transition-all duration-300 ease-out;
+  @apply h-full bg-nestle-blue transition-all duration-300 ease-out;
 }
