@@ -74,7 +74,7 @@ export default function S18_FrutoNyanya() {
           {/* Средняя колонка - скриншот */}
           <div className="h-full">
             <ImagePlaceholder
-              src="/images/frutonyanya-instagram.jpg"
+              src="/competitors/frutonyanya.webp"
               alt="Скриншот Instagram страницы FrutoNyanya"
               aspectRatio="3/4"
               className="rounded-lg shadow-md h-full object-cover"

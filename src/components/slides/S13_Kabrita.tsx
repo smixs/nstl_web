@@ -74,7 +74,7 @@ export default function S13_Kabrita() {
           {/* Средняя колонка - скриншот */}
           <div className="h-full">
             <ImagePlaceholder
-              src="/images/kabrita-instagram.jpg"
+              src="/competitors/kabrita.webp"
               alt="Скриншот Instagram страницы Kabrita"
               aspectRatio="3/4"
               className="rounded-lg shadow-md h-full object-cover"

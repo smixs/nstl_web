@@ -74,7 +74,7 @@ export default function S16_Nutrilon() {
           {/* Средняя колонка - скриншот */}
           <div className="h-full">
             <ImagePlaceholder
-              src="/images/nutrilon-instagram.jpg"
+              src="/competitors/nutrilon.webp"
               alt="Скриншот Instagram страницы Nutrilon"
               aspectRatio="3/4"
               className="rounded-lg shadow-md h-full object-cover"

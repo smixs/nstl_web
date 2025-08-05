@@ -74,7 +74,7 @@ export default function S15_Agusha() {
           {/* Средняя колонка - скриншот */}
           <div className="h-full">
             <ImagePlaceholder
-              src="/images/agusha-instagram.jpg"
+              src="/competitors/agusha.webp"
               alt="Скриншот Instagram страницы Agusha"
               aspectRatio="3/4"
               className="rounded-lg shadow-md h-full object-cover"

@@ -74,7 +74,7 @@ export default function S17_Nuppi() {
           {/* Средняя колонка - скриншот */}
           <div className="h-full">
             <ImagePlaceholder
-              src="/images/nuppi-instagram.jpg"
+              src="/competitors/nuppi.webp"
               alt="Скриншот Instagram страницы Nuppi"
               aspectRatio="3/4"
               className="rounded-lg shadow-md h-full object-cover"

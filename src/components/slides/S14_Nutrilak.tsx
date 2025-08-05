@@ -74,7 +74,7 @@ export default function S14_Nutrilak() {
           {/* Средняя колонка - скриншот */}
           <div className="h-full">
             <ImagePlaceholder
-              src="/images/nutrilak-instagram.jpg"
+              src="/competitors/nutrilak.webp"
               alt="Скриншот Instagram страницы Nutrilak"
               aspectRatio="3/4"
               className="rounded-lg shadow-md h-full object-cover"
