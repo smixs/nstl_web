@@ -130,35 +130,54 @@ p {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* Print styles - CRITICAL! */
+/* Print styles - CRITICAL for A4 LANDSCAPE! */
+@page {
+  size: 297mm 210mm; /* A4 landscape - width height */
+  margin: 15mm;
+}
+
 @media print {
-  .slide {
-    display: block !important;
-    page-break-after: always;
-    page-break-inside: avoid;
-    width: 100%;
-    height: 100vh;
+  /* Reset for print */
+  html, body {
     margin: 0;
     padding: 0;
+    overflow: visible !important;
+  }
+  
+  /* Override container */
+  .presentation {
+    height: auto !important;
+    overflow: visible !important;
+  }
+  
+  /* Make ALL slides visible and sized for A4 landscape */
+  .slide {
+    display: block !important;
+    position: static !important;
+    opacity: 1 !important;
+    width: 267mm !important; /* 297mm - 30mm margins */
+    height: 180mm !important; /* 210mm - 30mm margins */
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    page-break-after: always;
+    page-break-inside: avoid;
+    box-sizing: border-box;
   }
   
   .slide:last-child {
     page-break-after: auto;
   }
   
-  .print\:hidden {
+  /* Hide navigation elements */
+  .print\:hidden,
+  .fixed {
     display: none !important;
   }
   
-  body {
-    margin: 0;
-    padding: 0;
-    background: white;
-  }
-  
+  /* Ensure colors print */
   * {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    color-adjust: exact;
   }
 }

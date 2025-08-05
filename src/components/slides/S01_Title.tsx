@@ -1,6 +1,5 @@
 import SlideWrapper from '@/components/SlideWrapper'
 import { HiSparkles } from 'react-icons/hi2'
-import { FaBaby } from 'react-icons/fa'
 
 export default function S01_Title() {
   return (
@@ -9,8 +8,12 @@ export default function S01_Title() {
         <div className="text-center max-w-4xl mx-auto space-y-8">
           {/* Logo */}
           <div className="flex justify-center mb-6">
-            <div className="icon-container-primary p-6 scale-150">
-              <FaBaby className="w-10 h-10 icon-primary" />
+            <div className="bg-white rounded-3xl shadow-soft p-8">
+              <img 
+                src="/images/logo.avif" 
+                alt="Baby&Me Logo" 
+                className="h-24 w-auto"
+              />
             </div>
           </div>
           

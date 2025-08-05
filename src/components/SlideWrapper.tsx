@@ -52,6 +52,15 @@ export default function SlideWrapper({
       {/* Background decorative shapes */}
       {showShapes && variant === 'default' && <BackgroundShapes />}
       
+      {/* Agency logo in top right corner */}
+      <div className="absolute top-8 right-8 z-20 print:hidden">
+        <img 
+          src="/TDI_ai_color.png" 
+          alt="TDI Agency" 
+          className="h-10 w-auto opacity-30 hover:opacity-40 transition-opacity"
+        />
+      </div>
+      
       {/* Main content area with 10% padding from edges */}
       <div className="flex-1 flex flex-col justify-center px-[10%] py-[10%] relative z-10">
         <div className="max-w-7xl mx-auto w-full">
