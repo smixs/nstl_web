@@ -21,6 +21,41 @@ This file provides guidance to Claude Code (claude.ai/code) when working with th
 - Использовать точные заголовки из документа
 - При любых сомнениях - сверяться с оригиналом
 
+## 🔥 КРИТИЧЕСКИ ВАЖНЫЕ ПРАВИЛА РАЗРАБОТКИ
+
+### **1. ВСЕГДА ИСПОЛЬЗОВАТЬ ТОЛЬКО ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ!!!**
+
+⚠️ **НИКОГДА НЕ ХАРДКОДИТЬ ЦВЕТА И СТИЛИ!**
+
+❌ **КАТЕГОРИЧЕСКИ ЗАПРЕЩЕНО**:
+- `blue-600`, `green-500`, `red-400` и любые другие хардкод цвета
+- Любые inline стили с цветами
+- Придумывать свои цвета и оттенки
+
+✅ **ОБЯЗАТЕЛЬНО ИСПОЛЬЗОВАТЬ**:
+- Цвета из `tailwind.config.js`: `nestle-blue`, `baby-pink`, `soft-green`, `gray-900`, `gray-600` и т.д.
+- Цвета из `lib/constants.ts` для JS логики
+- ТОЛЬКО глобальные переменные, НИКОГДА хардкод!
+
+### **2. ВСЕГДА ИКОНКИ, НИКОГДА ЭМОДЗИ!!!**
+
+❌ **ЗАПРЕЩЕНО**:
+- Использовать эмодзи: 😊 🎯 📊 ❤️ и любые другие
+- Unicode символы вместо иконок
+
+✅ **ОБЯЗАТЕЛЬНО**:
+- Только иконки из `react-icons` (hi, hi2, fa, etc.)
+- Импортировать и использовать как компоненты
+- Пример: `import { HiOutlineDocumentReport } from 'react-icons/hi'`
+
+### **3. КОНТЕНТ ДОЛЖЕН ПОМЕЩАТЬСЯ В A4 ДЛЯ ПЕЧАТИ!!!**
+
+⚠️ **КРИТИЧНО ДЛЯ ПЕЧАТИ**:
+- Все слайды должны корректно печататься на A4
+- Контент не должен выходить за границы страницы
+- Проверять отступы и размеры элементов
+- Нижние элементы не должны обрезаться при печати
+
 ## Project Overview
 
 This is a web presentation for Nestle Baby & Me Uzbekistan showcasing their 2025-2026 digital transformation strategy to SMM agencies. The presentation addresses the critical business challenge of low engagement rate (1.20% ER with 46K followers) and presents a comprehensive strategy built on "25 years = 3 generations of trust" positioning.
@@ -268,8 +303,8 @@ function App() {
 This guide includes:
 - Component structure templates with exact code patterns
 - ~~Background patterns~~ (DEPRECATED - use no backgrounds)
-- Icon system using React Icons (hi2, hi, fa)
-- Color scheme (blue-600, green-600, red-600, etc.)
+- Icon system using React Icons (hi2, hi, fa) - NEVER EMOJIS
+- Color scheme from global variables ONLY (nestle-blue, baby-pink, gray-900, etc.)
 - Typography hierarchy
 - Card and Badge patterns
 - Layout grids and spacing rules

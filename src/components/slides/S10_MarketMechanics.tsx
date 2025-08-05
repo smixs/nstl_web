@@ -1,7 +1,7 @@
 import SlideWrapper from '@/components/SlideWrapper'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { HiVideoCamera, HiUserGroup, HiChatBubbleBottomCenterText, HiSparkles, HiClock } from 'react-icons/hi2'
+import { HiVideoCamera, HiUserGroup, HiChatBubbleBottomCenterText, HiSparkles, HiClock, HiBookmark } from 'react-icons/hi2'
 import { FaLightbulb } from 'react-icons/fa'
 
 export default function S10_MarketMechanics() {
@@ -11,7 +11,7 @@ export default function S10_MarketMechanics() {
         {/* Header */}
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            5 работающих механик рынка
+            6 работающих механик рынка
           </h2>
           <p className="text-lg text-gray-600">
             Проверенные инструменты повышения вовлеченности
@@ -149,7 +149,7 @@ export default function S10_MarketMechanics() {
           </Card>
 
           {/* Mechanic 5 */}
-          <Card className="hover:shadow-sm transition-all duration-300 md:col-span-2 lg:col-span-1">
+          <Card className="hover:shadow-sm transition-all duration-300">
             <CardHeader className="pb-4">
               <div className="icon-container-info mb-4">
                 <HiClock className="w-7 h-7 icon-info" />
@@ -179,6 +179,38 @@ export default function S10_MarketMechanics() {
               </div>
             </CardContent>
           </Card>
+
+          {/* Mechanic 6 */}
+          <Card className="hover:shadow-sm transition-all duration-300">
+            <CardHeader className="pb-4">
+              <div className="icon-container-secondary mb-4">
+                <HiBookmark className="w-7 h-7 icon-secondary" />
+              </div>
+              <CardTitle className="text-lg">Save-worthy контент</CardTitle>
+              <Badge variant="secondary" className="mt-2">Фокус на сохранениях</Badge>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <div className="space-y-2">
+                <div className="flex items-start space-x-2">
+                  <span className="text-pink-600">•</span>
+                  <p className="text-sm">Чек-листы и инструкции</p>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <span className="text-pink-600">•</span>
+                  <p className="text-sm">Научные факты о питании</p>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <span className="text-pink-600">•</span>
+                  <p className="text-sm">Возрастные нормы развития</p>
+                </div>
+              </div>
+              <div className="mt-3 pt-3 border-t">
+                <p className="text-xs text-gray-500">
+                  Пример: Nutrilak — материалы для сохранения
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Success Formula */}
@@ -186,13 +218,13 @@ export default function S10_MarketMechanics() {
           <div className="flex items-center justify-center space-x-3">
             <FaLightbulb className="w-6 h-6 text-yellow-500" />
             <p className="text-center text-base font-medium text-gray-900">
-              Формула успеха: Видео + UGC + Диалог + Игра + Ритм = ER 3%+
+              Формула успеха: Видео + UGC + Диалог + Игра + Ритм + Saves = ER 3%+
             </p>
           </div>
         </div>
 
         {/* Bottom Conclusion */}
-        <div className="mt-auto pt-8">
+        <div className="mt-8">
           <div className="bg-gray-50 rounded-2xl px-8 py-6 shadow-sm max-w-4xl mx-auto">
             <p className="text-center text-base font-medium text-gray-900">
               Каждая механика усиливает другую — важна комплексная реализация
