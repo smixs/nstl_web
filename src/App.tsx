@@ -65,7 +65,8 @@ function App() {
             <div
               className={cn(
                 "slide w-full min-h-screen cursor-pointer",
-                currentSlide === index ? "block" : "hidden print:block"
+                "print:static print:block print:!w-[267mm] print:!h-[180mm]",
+                currentSlide === index ? "block" : "hidden"
               )}
               onClick={handleClick}
             >
