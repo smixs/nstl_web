@@ -24,6 +24,11 @@ import S21_StrategicAdvantage from './S21_StrategicAdvantage'
 import S22_UniqueRTB from './S22_UniqueRTB'
 import S23_BigIdea from './S23_BigIdea'
 import S24_Positioning from './S24_Positioning'
+import S25_StrategicSolutions from './S25_StrategicSolutions'
+import S26_UGCContest from './S26_UGCContest'
+import S27_AIVoiceBot from './S27_AIVoiceBot'
+import S28_Personalization from './S28_Personalization'
+import S29_GenerationsContent from './S29_GenerationsContent'
 import S30_Block4Divider from './S30_Block4Divider'
 import S38_Block5Divider from './S38_Block5Divider'
 import S41_Block6Divider from './S41_Block6Divider'
@@ -55,6 +60,11 @@ export const slides = [
   S22_UniqueRTB,
   S23_BigIdea,
   S24_Positioning,
+  S25_StrategicSolutions,
+  S26_UGCContest,
+  S27_AIVoiceBot,
+  S28_Personalization,
+  S29_GenerationsContent,
   S30_Block4Divider,
   S38_Block5Divider,
   S41_Block6Divider,
@@ -87,6 +97,11 @@ export const slideNames = [
   'Уникальное RTB',
   'Big Idea',
   'Позиционирование Baby&Me',
+  '4 стратегических решения',
+  'Решение 1: Конкурс UGC',
+  'Решение 2: Голосовой AI-помощник',
+  'Решение 3: Персонализация',
+  'Решение 4: Контент поколений',
   'Блок 4: Тактическая реализация',
   'Блок 5: Безопасность и контроль',
   'Блок 6: Метрики и результаты',

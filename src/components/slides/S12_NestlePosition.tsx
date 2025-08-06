@@ -24,7 +24,7 @@ export default function S12_NestlePosition() {
               src="/competitors/nestle.webp"
               alt="Nestle Baby & Me Instagram Profile"
               aspectRatio="3/4"
-              className="w-full max-w-sm mx-auto shadow-lg"
+              className="w-full shadow-lg"
             />
           </div>
 
