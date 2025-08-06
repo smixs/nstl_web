@@ -80,16 +80,16 @@ export default function S19_Ecommerce() {
               <div className="icon-container-success mb-3">
                 <HiOutlineCurrencyDollar className="w-6 h-6 icon-success" />
               </div>
-              <CardTitle className="text-base font-bold">3. ДОВЕРИЕ ИМЕЕТ ВАЛЮТНЫЙ КУРС</CardTitle>
+              <CardTitle className="text-base font-bold">3. ЦЕПОЧКА ДОВЕРИЯ К БРЕНДУ</CardTitle>
               <p className="text-lg font-bold text-gray-900 mt-2">
-                Врач → Uzum → Цена
+                Как формируется доверие мамы к NAN
               </p>
             </CardHeader>
             <CardContent className="space-y-2 text-sm">
-              <p className="text-gray-600">• <span className="font-bold">Врач</span> — главный эмитент доверия при выборе</p>
-              <p className="text-gray-600">• <span className="font-bold">E-commerce платформы</span> — второй источник через "оригинальность"</p>
-              <p className="text-gray-600">• <span className="font-bold">"Арзон нарх"</span> — сигнал доступности и честности</p>
-              <p className="text-gray-600">• <span className="font-bold">Любое сомнение</span> ("запах не тот") = мгновенная потеря клиента</p>
+              <p className="text-gray-600">• <span className="font-bold">Врач</span> — первый и главный источник доверия к продукту</p>
+              <p className="text-gray-600">• <span className="font-bold">Маркетплейс</span> — подтверждает, что товар оригинальный</p>
+              <p className="text-gray-600">• <span className="font-bold">Советы мам</span> — "моя подруга тоже кормила NAN и все хорошо"</p>
+              <p className="text-gray-600 pt-2">Наше преимущество: У NAN есть все три уровня доверия + история поколений</p>
             </CardContent>
           </Card>
         </div>
