@@ -78,7 +78,7 @@ export default function S05_UniqueAdvantage() {
           {/* Правая часть - изображение */}
           <div className="relative animate-slideRight animation-delay-600">
             <ImagePlaceholder
-              src="/images/three-generations.jpg"
+              src="/images/family.webp"
               alt="Три поколения семьи - бабушка, мама и ребенок"
               aspectRatio="4/3"
               className="rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300"

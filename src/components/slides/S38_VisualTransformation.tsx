@@ -1,149 +1,153 @@
 import SlideWrapper from '@/components/SlideWrapper'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { HiOutlineArrowRight } from 'react-icons/hi2'
-import { FaBook, FaUsers, FaAd, FaHandsHelping } from 'react-icons/fa'
+import { HiOutlineDocumentText, HiOutlineUsers, HiOutlineCamera, HiOutlineHome, HiOutlineChatBubbleLeftRight, HiOutlineBookmark, HiOutlineCircleStack } from 'react-icons/hi2'
+import ImagePlaceholder from '@/components/ImagePlaceholder'
 
-export default function S37_VisualTransformation() {
+export default function S38_VisualTransformation() {
   return (
     <SlideWrapper>
       <div className="flex flex-col h-full">
         {/* Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-6">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
             Визуальная трансформация
           </h2>
           <p className="text-lg text-gray-600">
-            Новый подход к визуальному контенту
+            Усиление существующей концепции "Круга доверия"
           </p>
         </div>
 
-        {/* Transformation Grid */}
-        <div className="space-y-6 max-w-5xl mx-auto flex-1">
-          {/* From Catalog to Stories */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-            <Card className="hover:shadow-lg transition-all duration-300 bg-gray-50">
-              <CardHeader className="pb-2">
-                <div className="flex items-center gap-3">
-                  <FaBook className="w-6 h-6 text-gray-500" />
-                  <CardTitle className="text-lg text-gray-700">
-                    От каталога
-                  </CardTitle>
+        {/* Main Content */}
+        <div className="flex-1 space-y-6">
+          {/* Transformations in Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* From Posts-Advice to Stories */}
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardHeader className="pb-3">
+                <div className="flex items-center gap-2 text-center justify-center">
+                  <HiOutlineDocumentText className="w-5 h-5 text-gray-500" />
+                  <span className="text-sm text-gray-700">От постов-советов</span>
+                  <HiOutlineArrowRight className="w-4 h-4 text-gray-400" />
+                  <HiOutlineUsers className="w-5 h-5 text-nestle-blue" />
+                  <span className="text-sm text-gray-900 font-medium">к историям поколений</span>
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600">
-                  Статичные продуктовые фото
+                <p className="text-xs text-gray-600 text-center">
+                  Экспертные рекомендации → Живые истории реальных семей
                 </p>
               </CardContent>
             </Card>
-            
-            <div className="flex justify-center">
-              <HiOutlineArrowRight className="w-8 h-8 text-soft-blue-dark" />
-            </div>
-            
-            <Card className="hover:shadow-lg transition-all duration-300 border-2 border-soft-blue">
-              <CardHeader className="pb-2">
-                <div className="flex items-center gap-3">
-                  <FaUsers className="w-6 h-6 text-soft-blue-dark" />
-                  <CardTitle className="text-lg text-gray-900">
-                    к историям
-                  </CardTitle>
+
+            {/* From Stock Photo to Real Life */}
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardHeader className="pb-3">
+                <div className="flex items-center gap-2 text-center justify-center">
+                  <HiOutlineCamera className="w-5 h-5 text-gray-500" />
+                  <span className="text-sm text-gray-700">От stock-фото</span>
+                  <HiOutlineArrowRight className="w-4 h-4 text-gray-400" />
+                  <HiOutlineHome className="w-5 h-5 text-baby-pink" />
+                  <span className="text-sm text-gray-900 font-medium">к реальной жизни</span>
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-700 font-medium">
-                  Живые истории реальных семей
+                <p className="text-xs text-gray-600 text-center">
+                  Идеальные постановочные кадры → Настоящие моменты материнства
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* From One-time Value to Save-worthy */}
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardHeader className="pb-3">
+                <div className="flex items-center gap-2 text-center justify-center">
+                  <HiOutlineChatBubbleLeftRight className="w-5 h-5 text-gray-500" />
+                  <span className="text-sm text-gray-700">От разовой пользы</span>
+                  <HiOutlineArrowRight className="w-4 h-4 text-gray-400" />
+                  <HiOutlineBookmark className="w-5 h-5 text-success-green" />
+                  <span className="text-sm text-gray-900 font-medium">к save-worthy контенту</span>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-xs text-gray-600 text-center">
+                  Общие советы → Чек-листы, которые хочется сохранить
                 </p>
               </CardContent>
             </Card>
           </div>
 
-          {/* From Stock to Reality */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-            <Card className="hover:shadow-lg transition-all duration-300 bg-gray-50">
-              <CardHeader className="pb-2">
-                <div className="flex items-center gap-3">
-                  <FaBook className="w-6 h-6 text-gray-500" />
-                  <CardTitle className="text-lg text-gray-700">
-                    От stock-фото
-                  </CardTitle>
+          {/* Key Visual Principles */}
+          <Card className="border-2 border-nestle-blue/20">
+            <CardHeader>
+              <CardTitle className="text-xl text-center text-gray-900">Ключевые визуальные принципы</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Circles DNA */}
+                <div className="text-center space-y-3">
+                  <div className="flex items-center justify-center gap-2">
+                    <HiOutlineCircleStack className="w-6 h-6 text-nestle-blue" />
+                    <span className="font-semibold text-gray-900">Круги — наша ДНК</span>
+                  </div>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• Символ банки NAN</li>
+                    <li>• Круг доверия семьи</li>
+                    <li>• Связь поколений</li>
+                  </ul>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Идеальные постановочные кадры
-                </p>
-              </CardContent>
-            </Card>
-            
-            <div className="flex justify-center">
-              <HiOutlineArrowRight className="w-8 h-8 text-soft-pink-dark" />
-            </div>
-            
-            <Card className="hover:shadow-lg transition-all duration-300 border-2 border-soft-pink">
-              <CardHeader className="pb-2">
-                <div className="flex items-center gap-3">
-                  <FaUsers className="w-6 h-6 text-soft-pink-dark" />
-                  <CardTitle className="text-lg text-gray-900">
-                    к реальной жизни
-                  </CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-700 font-medium">
-                  Настоящие моменты материнства
-                </p>
-              </CardContent>
-            </Card>
-          </div>
 
-          {/* From Advertising to Value */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-            <Card className="hover:shadow-lg transition-all duration-300 bg-gray-50">
-              <CardHeader className="pb-2">
-                <div className="flex items-center gap-3">
-                  <FaAd className="w-6 h-6 text-gray-500" />
-                  <CardTitle className="text-lg text-gray-700">
-                    От рекламы
-                  </CardTitle>
+                {/* UGC Priority */}
+                <div className="text-center space-y-3">
+                  <div className="flex items-center justify-center gap-2">
+                    <HiOutlineCamera className="w-6 h-6 text-baby-pink" />
+                    <span className="font-semibold text-gray-900">UGC в приоритете</span>
+                  </div>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• Живые фото мам-амбассадоров</li>
+                    <li>• Истории трех поколений</li>
+                    <li>• Неидеальная, но настоящая жизнь</li>
+                  </ul>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">
-                  Прямая продажа продукта
-                </p>
-              </CardContent>
-            </Card>
-            
-            <div className="flex justify-center">
-              <HiOutlineArrowRight className="w-8 h-8 text-soft-green-dark" />
-            </div>
-            
-            <Card className="hover:shadow-lg transition-all duration-300 border-2 border-soft-green">
-              <CardHeader className="pb-2">
-                <div className="flex items-center gap-3">
-                  <FaHandsHelping className="w-6 h-6 text-soft-green-dark" />
-                  <CardTitle className="text-lg text-gray-900">
-                    к пользе
-                  </CardTitle>
+
+                {/* Save-worthy Formats */}
+                <div className="text-center space-y-3">
+                  <div className="flex items-center justify-center gap-2">
+                    <HiOutlineBookmark className="w-6 h-6 text-success-green" />
+                    <span className="font-semibold text-gray-900">Save-worthy форматы</span>
+                  </div>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• Чек-листы для сохранения</li>
+                    <li>• Пошаговые инструкции</li>
+                    <li>• Полезные памятки</li>
+                  </ul>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-700 font-medium">
-                  Решение реальных проблем мам
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Horizontal Image Container */}
+          <Card className="border-2 border-baby-pink/20">
+            <CardContent className="p-6">
+              <ImagePlaceholder 
+                src="/setka1.png"
+                alt="Визуальная трансформация - примеры контента"
+                className="w-full h-auto rounded-lg shadow-md"
+                aspectRatio="21/7"
+              />
+            </CardContent>
+          </Card>
         </div>
 
         {/* Bottom Key Message */}
-        <div className="mt-auto pt-6">
-          <div className="bg-gradient-to-r from-soft-blue/10 to-soft-pink/10 rounded-2xl p-6 max-w-3xl mx-auto">
-            <p className="text-center text-lg font-semibold text-gray-900">
-              Аутентичность и польза — новые драйверы вовлеченности
-            </p>
-          </div>
+        <div className="mt-6">
+          <Card className="bg-gradient-to-r from-nestle-blue/10 to-baby-pink/10 border-none">
+            <CardContent className="p-6">
+              <p className="text-center text-lg font-semibold text-gray-900">
+                Аутентичность и польза — новые драйверы вовлеченности
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </SlideWrapper>

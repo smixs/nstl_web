@@ -39,6 +39,7 @@ import S35_DoctorsStrategy from './S35_DoctorsStrategy'
 import S36_CreativeExamples from './S36_CreativeExamples'
 import S37_CommunityManagement from './S37_CommunityManagement'
 import S38_VisualTransformation from './S38_VisualTransformation'
+import S38_1_VisualGrid from './S38_1_VisualGrid'
 import S39_EngagementMechanics from './S39_EngagementMechanics'
 import S39_Block5Divider from './S39_Block5Divider'
 import S40_UGCSafety from './S40_UGCSafety'
@@ -90,8 +91,9 @@ export const slides = [
   S35_DoctorsStrategy,
   S36_CreativeExamples,
   S37_CommunityManagement,
-  S38_VisualTransformation,
   S39_EngagementMechanics,
+  S38_VisualTransformation,
+  S38_1_VisualGrid,
   S39_Block5Divider,
   S40_UGCSafety,
   S41_RiskProtection,
@@ -143,8 +145,9 @@ export const slideNames = [
   'Работа с педиатрами',
   'Примеры креативов',
   'Community Management 3.0',
-  'Визуальная трансформация',
   'Механики вовлечения',
+  'Визуальная трансформация',
+  'Визуальная сетка',
   'Блок 5: Безопасность и контроль',
   'Система безопасности UGC',
   'Защита от рисков',
