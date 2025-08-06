@@ -40,7 +40,7 @@ export default function S43_QualityMetrics() {
               </p>
               <div className="bg-soft-blue/10 rounded-lg p-3">
                 <p className="text-sm text-gray-600">
-                  <strong>Цель:</strong> Сохранения > Лайков
+                  <strong>Цель:</strong> Сохранения &gt; Лайков
                 </p>
               </div>
             </CardContent>
@@ -94,7 +94,7 @@ export default function S43_QualityMetrics() {
               </p>
               <div className="bg-soft-green/10 rounded-lg p-3">
                 <p className="text-sm text-gray-600">
-                  <strong>Цель:</strong> Средняя сессия >3 минут
+                  <strong>Цель:</strong> Средняя сессия &gt;3 минут
                 </p>
               </div>
             </CardContent>
