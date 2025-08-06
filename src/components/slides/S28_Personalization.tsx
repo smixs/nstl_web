@@ -104,7 +104,7 @@ export default function S28_Personalization() {
 
         {/* Bottom emphasis */}
         <div className="mt-auto pt-6">
-          <div className="bg-gray-900 text-white rounded-xl px-6 py-4 max-w-2xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-soft-green to-green-pastel text-gray-900 rounded-xl px-6 py-4 max-w-2xl mx-auto text-center">
             <p className="text-lg font-medium">
               Персональный помощник, который знает вашего малыша
             </p>

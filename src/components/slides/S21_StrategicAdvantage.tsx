@@ -69,7 +69,7 @@ export default function S21_StrategicAdvantage() {
 
         {/* Bottom Emphasis */}
         <div className="mt-8">
-          <div className="bg-gray-900 text-white rounded-2xl px-8 py-6 shadow-lg max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-soft-green to-green-pastel text-gray-900 rounded-2xl px-8 py-6 shadow-lg max-w-4xl mx-auto">
             <p className="text-center text-2xl font-bold">
               ТАКОГО НЕТ НИ У КОГО НА РЫНКЕ
             </p>
