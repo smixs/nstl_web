@@ -1,7 +1,6 @@
 import { useState, useEffect, createContext } from 'react'
 import { slides } from '@/components/slides'
 import ProgressBar from '@/components/ProgressBar'
-import PDFDownloadMenu from '@/components/PDFDownloadMenu'
 import { cn } from '@/lib/utils'
 import { BackgroundProvider } from '@/contexts/BackgroundContext'
 
@@ -80,9 +79,6 @@ function App() {
       <div className={cn("presentation min-h-screen bg-white", isPrintMode && "print-mode")}>
         {/* Прогресс бар */}
         {!isPrintMode && <ProgressBar current={currentSlide} total={slides.length} />}
-        
-        {/* PDF Download Menu */}
-        {!isPrintMode && <PDFDownloadMenu />}
         
         {/* Подсказка навигации на первом слайде */}
         {currentSlide === 0 && !isPrintMode && (
