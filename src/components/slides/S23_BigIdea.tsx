@@ -16,8 +16,8 @@ export default function S23_BigIdea() {
           </div>
           
           {/* Main Big Idea */}
-          <div className="bg-gradient-to-r from-soft-blue/30 to-baby-pink/30 rounded-3xl p-12 max-w-4xl mx-auto shadow-lg">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <div className="bg-gradient-to-r from-soft-blue/30 to-baby-pink/30 rounded-3xl p-12 max-w-6xl mx-auto shadow-lg">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 whitespace-nowrap">
               "КРУГ ДОВЕРИЯ Baby & Me"
             </h1>
             <p className="text-2xl md:text-3xl font-medium text-gray-700">

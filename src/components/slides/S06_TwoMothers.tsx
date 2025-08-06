@@ -2,7 +2,6 @@ import SlideWrapper from '@/components/SlideWrapper'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { HiUsers, HiAcademicCap, HiShieldCheck } from 'react-icons/hi2'
-import { FaSearch, FaRocket } from 'react-icons/fa'
 
 export default function S06_TwoMothers() {
   return (
@@ -23,8 +22,12 @@ export default function S06_TwoMothers() {
           {/* Striving Researchers */}
           <Card className="hover:shadow-sm transition-all duration-300">
             <CardHeader className="pb-4">
-              <div className="icon-container-primary mb-4">
-                <FaSearch className="w-7 h-7 icon-primary" />
+              <div className="mb-4">
+                <img 
+                  src="/TA/researcher.webp" 
+                  alt="Стремящаяся исследователь"
+                  className="w-16 h-16 rounded-full object-cover mx-auto shadow-md"
+                />
               </div>
               <CardTitle className="text-xl">Стремящиеся исследователи</CardTitle>
               <Badge variant="default" className="mt-2">60%</Badge>
@@ -64,8 +67,12 @@ export default function S06_TwoMothers() {
           {/* Uncompromising Pioneers */}
           <Card className="hover:shadow-sm transition-all duration-300">
             <CardHeader className="pb-4">
-              <div className="icon-container-secondary mb-4">
-                <FaRocket className="w-7 h-7 icon-secondary" />
+              <div className="mb-4">
+                <img 
+                  src="/TA/noncompromisse.webp" 
+                  alt="Бескомпромиссная первопроходец"
+                  className="w-16 h-16 rounded-full object-cover mx-auto shadow-md"
+                />
               </div>
               <CardTitle className="text-xl">Бескомпромиссные первопроходцы</CardTitle>
               <Badge variant="secondary" className="mt-2">40%</Badge>

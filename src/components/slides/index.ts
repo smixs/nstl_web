@@ -24,29 +24,30 @@ import S21_StrategicAdvantage from './S21_StrategicAdvantage'
 import S22_UniqueRTB from './S22_UniqueRTB'
 import S23_BigIdea from './S23_BigIdea'
 import S24_Positioning from './S24_Positioning'
-import S25_StrategicSolutions from './S25_StrategicSolutions'
-import S26_UGCContest from './S26_UGCContest'
-import S27_AIVoiceBot from './S27_AIVoiceBot'
-import S28_Personalization from './S28_Personalization'
-import S29_GenerationsContent from './S29_GenerationsContent'
-import S30_ToneOfVoice from './S30_ToneOfVoice'
-import S30_Block4Divider from './S30_Block4Divider'
-import S31_ContentRubrics from './S31_ContentRubrics'
-import S32_InstagramFormats from './S32_InstagramFormats'
-import S33_TelegramStrategy from './S33_TelegramStrategy'
-import S34_DoctorsStrategy from './S34_DoctorsStrategy'
-import S35_CreativeExamples from './S35_CreativeExamples'
-import S36_CommunityManagement from './S36_CommunityManagement'
-import S37_VisualTransformation from './S37_VisualTransformation'
-import S38_EngagementMechanics from './S38_EngagementMechanics'
-import S38_Block5Divider from './S38_Block5Divider'
-import S39_UGCSafety from './S39_UGCSafety'
-import S40_RiskProtection from './S40_RiskProtection'
-import S41_ComplianceProcess from './S41_ComplianceProcess'
-import S41_Block6Divider from './S41_Block6Divider'
-import S42_KPILadder from './S42_KPILadder'
-import S43_QualityMetrics from './S43_QualityMetrics'
-import S44_90DayPlan from './S44_90DayPlan'
+import S25_Transformation from './S25_Transformation'
+import S26_StrategicSolutions from './S26_StrategicSolutions'
+import S27_UGCContest from './S27_UGCContest'
+import S28_AIVoiceBot from './S28_AIVoiceBot'
+import S29_Personalization from './S29_Personalization'
+import S30_GenerationsContent from './S30_GenerationsContent'
+import S31_ToneOfVoice from './S31_ToneOfVoice'
+import S31_Block4Divider from './S31_Block4Divider'
+import S32_ContentRubrics from './S32_ContentRubrics'
+import S33_InstagramFormats from './S33_InstagramFormats'
+import S34_TelegramStrategy from './S34_TelegramStrategy'
+import S35_DoctorsStrategy from './S35_DoctorsStrategy'
+import S36_CreativeExamples from './S36_CreativeExamples'
+import S37_CommunityManagement from './S37_CommunityManagement'
+import S38_VisualTransformation from './S38_VisualTransformation'
+import S39_EngagementMechanics from './S39_EngagementMechanics'
+import S39_Block5Divider from './S39_Block5Divider'
+import S40_UGCSafety from './S40_UGCSafety'
+import S41_RiskProtection from './S41_RiskProtection'
+import S42_ComplianceProcess from './S42_ComplianceProcess'
+import S42_Block6Divider from './S42_Block6Divider'
+import S43_KPILadder from './S43_KPILadder'
+import S44_QualityMetrics from './S44_QualityMetrics'
+import S45_90DayPlan from './S45_90DayPlan'
 
 export const slides = [
   S01_Title,
@@ -75,29 +76,30 @@ export const slides = [
   S22_UniqueRTB,
   S23_BigIdea,
   S24_Positioning,
-  S25_StrategicSolutions,
-  S26_UGCContest,
-  S27_AIVoiceBot,
-  S28_Personalization,
-  S29_GenerationsContent,
-  S30_ToneOfVoice,
-  S31_ContentRubrics,
-  S32_InstagramFormats,
-  S33_TelegramStrategy,
-  S34_DoctorsStrategy,
-  S35_CreativeExamples,
-  S36_CommunityManagement,
-  S37_VisualTransformation,
-  S38_EngagementMechanics,
-  S30_Block4Divider,
-  S39_UGCSafety,
-  S40_RiskProtection,
-  S41_ComplianceProcess,
-  S38_Block5Divider,
-  S42_KPILadder,
-  S43_QualityMetrics,
-  S44_90DayPlan,
-  S41_Block6Divider,
+  S25_Transformation,
+  S26_StrategicSolutions,
+  S27_UGCContest,
+  S28_AIVoiceBot,
+  S29_Personalization,
+  S30_GenerationsContent,
+  S31_ToneOfVoice,
+  S31_Block4Divider,
+  S32_ContentRubrics,
+  S33_InstagramFormats,
+  S34_TelegramStrategy,
+  S35_DoctorsStrategy,
+  S36_CreativeExamples,
+  S37_CommunityManagement,
+  S38_VisualTransformation,
+  S39_EngagementMechanics,
+  S39_Block5Divider,
+  S40_UGCSafety,
+  S41_RiskProtection,
+  S42_ComplianceProcess,
+  S42_Block6Divider,
+  S43_KPILadder,
+  S44_QualityMetrics,
+  S45_90DayPlan,
 ] as const
 
 export const slideNames = [
@@ -127,12 +129,14 @@ export const slideNames = [
   'Уникальное RTB',
   'Big Idea',
   'Позиционирование Baby&Me',
+  'Позиция Nestle: От советника к доверенному эксперту поколений',
   '4 стратегических решения',
   'Решение 1: Конкурс UGC',
   'Решение 2: Голосовой AI-помощник',
   'Решение 3: Персонализация',
   'Решение 4: Контент поколений',
   'Tone of Voice',
+  'Блок 4: Тактическая реализация',
   'Контентные рубрики',
   'Форматы для Instagram',
   'Telegram-стратегия',
@@ -141,13 +145,12 @@ export const slideNames = [
   'Community Management 3.0',
   'Визуальная трансформация',
   'Механики вовлечения',
-  'Блок 4: Тактическая реализация',
+  'Блок 5: Безопасность и контроль',
   'Система безопасности UGC',
   'Защита от рисков',
   'Compliance процесс',
-  'Блок 5: Безопасность и контроль',
+  'Блок 6: Метрики и результаты',
   'KPI лестница',
   'Как измеряем качество',
   '90-дневный план',
-  'Блок 6: Метрики и результаты',
 ] as const
