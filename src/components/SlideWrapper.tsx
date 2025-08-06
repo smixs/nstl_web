@@ -24,9 +24,9 @@ export default function SlideWrapper({
   const backgroundImage = getBackgroundForSlide(slideIndex)
 
   const variants = {
-    default: 'bg-background-main text-text-primary',
-    gradient: 'bg-gradient-to-br from-nestle-blue via-nestle-blue-pastel to-nestle-light-blue text-white',
-    dark: 'bg-text-primary text-white'
+    default: 'bg-gray-50 text-gray-900',
+    gradient: 'bg-gradient-to-br from-soft-blue via-blue-pastel to-soft-blue text-white',
+    dark: 'bg-gray-900 text-white'
   }
 
   return (

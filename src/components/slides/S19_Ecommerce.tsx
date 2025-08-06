@@ -1,8 +1,7 @@
 import SlideWrapper from '@/components/SlideWrapper'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { HiOutlineTruck, HiOutlineShoppingCart, HiOutlineCurrencyDollar } from 'react-icons/hi2'
-import { FaBoxOpen, FaChartLine, FaTruckLoading } from 'react-icons/fa'
+import { HiOutlineShoppingCart, HiOutlineCurrencyDollar } from 'react-icons/hi2'
+import { FaBoxOpen } from 'react-icons/fa'
 
 export default function S19_Ecommerce() {
   return (

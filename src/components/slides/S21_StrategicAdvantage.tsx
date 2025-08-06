@@ -1,7 +1,7 @@
 import SlideWrapper from '@/components/SlideWrapper'
 import { Card, CardContent } from '@/components/ui/card'
-import { HiOutlineClock, HiOutlineHeart, HiOutlineSparkles } from 'react-icons/hi2'
-import { FaUsers, FaBaby, FaHandHoldingHeart } from 'react-icons/fa'
+import { HiOutlineHeart } from 'react-icons/hi2'
+import { FaUsers, FaHandHoldingHeart } from 'react-icons/fa'
 
 export default function S21_StrategicAdvantage() {
   return (

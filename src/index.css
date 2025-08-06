@@ -1,11 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
-@import "./styles/variables.css";
-@import "./styles/color-utilities.css";
 
 /* Define custom colors for Tailwind CSS v4 */
 @theme {
-  /* Soft Pastel Colors */
+  /* Standard Tailwind Colors - Required for icon colors */
+  --color-red-50: oklch(0.971 0.013 17.38);
+  --color-red-100: oklch(0.936 0.032 17.717);
+  --color-red-200: oklch(0.885 0.062 18.334);
+  --color-red-300: oklch(0.808 0.114 19.571);
+  --color-red-400: oklch(0.704 0.191 22.216);
+  --color-red-500: oklch(0.637 0.237 25.331);
+  --color-red-600: oklch(0.577 0.245 27.325);
+  --color-red-700: oklch(0.505 0.213 27.518);
+  --color-red-800: oklch(0.444 0.177 26.899);
+  --color-red-900: oklch(0.396 0.141 25.723);
+  --color-red-950: oklch(0.258 0.092 26.042);
+
+  --color-orange-50: oklch(0.98 0.016 73.684);
+  --color-orange-100: oklch(0.954 0.038 75.164);
+  --color-orange-200: oklch(0.901 0.076 70.697);
+  --color-orange-300: oklch(0.837 0.128 66.29);
+  --color-orange-400: oklch(0.75 0.183 55.934);
+  --color-orange-500: oklch(0.705 0.213 47.604);
+  --color-orange-600: oklch(0.646 0.222 41.116);
+  --color-orange-700: oklch(0.553 0.195 38.402);
+  --color-orange-800: oklch(0.47 0.157 37.304);
+  --color-orange-900: oklch(0.408 0.123 38.172);
+  --color-orange-950: oklch(0.266 0.079 36.259);
+
+  --color-yellow-50: oklch(0.987 0.026 102.212);
+  --color-yellow-100: oklch(0.973 0.071 103.193);
+  --color-yellow-200: oklch(0.945 0.129 101.54);
+  --color-yellow-300: oklch(0.905 0.182 98.111);
+  --color-yellow-400: oklch(0.852 0.199 91.936);
+  --color-yellow-500: oklch(0.795 0.184 86.047);
+  --color-yellow-600: oklch(0.681 0.162 75.834);
+  --color-yellow-700: oklch(0.554 0.135 66.442);
+  --color-yellow-800: oklch(0.476 0.114 61.907);
+  --color-yellow-900: oklch(0.421 0.095 57.708);
+  --color-yellow-950: oklch(0.286 0.066 53.813);
+
+  --color-green-50: oklch(0.982 0.018 155.826);
+  --color-green-100: oklch(0.962 0.044 156.743);
+  --color-green-200: oklch(0.925 0.084 155.995);
+  --color-green-300: oklch(0.871 0.15 154.449);
+  --color-green-400: oklch(0.792 0.209 151.711);
+  --color-green-500: oklch(0.723 0.219 149.579);
+  --color-green-600: oklch(0.627 0.194 149.214);
+  --color-green-700: oklch(0.527 0.154 150.069);
+  --color-green-800: oklch(0.448 0.119 151.328);
+  --color-green-900: oklch(0.393 0.095 152.535);
+  --color-green-950: oklch(0.266 0.065 152.934);
+
+  --color-blue-50: oklch(0.97 0.014 254.604);
+  --color-blue-100: oklch(0.932 0.032 255.585);
+  --color-blue-200: oklch(0.882 0.059 254.128);
+  --color-blue-300: oklch(0.809 0.105 251.813);
+  --color-blue-400: oklch(0.707 0.165 254.624);
+  --color-blue-500: oklch(0.623 0.214 259.815);
+  --color-blue-600: oklch(0.546 0.245 262.881);
+  --color-blue-700: oklch(0.488 0.243 264.376);
+  --color-blue-800: oklch(0.424 0.199 265.638);
+  --color-blue-900: oklch(0.379 0.146 265.522);
+  --color-blue-950: oklch(0.282 0.091 267.935);
+
+  --color-purple-50: oklch(0.977 0.014 308.299);
+  --color-purple-100: oklch(0.946 0.033 307.174);
+  --color-purple-200: oklch(0.902 0.063 306.703);
+  --color-purple-300: oklch(0.827 0.119 306.383);
+  --color-purple-400: oklch(0.714 0.203 305.504);
+  --color-purple-500: oklch(0.627 0.265 303.9);
+  --color-purple-600: oklch(0.558 0.288 302.321);
+  --color-purple-700: oklch(0.496 0.265 301.924);
+  --color-purple-800: oklch(0.438 0.218 303.724);
+  --color-purple-900: oklch(0.381 0.176 304.987);
+  --color-purple-950: oklch(0.291 0.149 302.717);
+
+  --color-pink-50: oklch(0.971 0.014 343.198);
+  --color-pink-100: oklch(0.948 0.028 342.258);
+  --color-pink-200: oklch(0.899 0.061 343.231);
+  --color-pink-300: oklch(0.823 0.12 346.018);
+  --color-pink-400: oklch(0.718 0.202 349.761);
+  --color-pink-500: oklch(0.656 0.241 354.308);
+  --color-pink-600: oklch(0.592 0.249 0.584);
+  --color-pink-700: oklch(0.525 0.223 3.958);
+  --color-pink-800: oklch(0.459 0.187 3.815);
+  --color-pink-900: oklch(0.408 0.153 2.432);
+  --color-pink-950: oklch(0.284 0.109 3.907);
+
+  /* Soft Pastel Colors - Custom theme */
   --color-soft-blue: #A8D8EA;
   --color-soft-pink: #FFAAA5;
   --color-soft-yellow: #FFE5AD;
@@ -38,6 +121,112 @@
   --color-baby-pink: #FFAAA5;
   --color-success-green: #B8E6B8;
   --color-danger-red: #FFAAA5;
+  
+  /* Semantic Colors for Icons */
+  --color-primary: var(--color-soft-blue);
+  --color-primary-dark: var(--color-blue-pastel);
+  --color-secondary: var(--color-soft-pink);
+  --color-secondary-dark: var(--color-pink-pastel);
+  --color-success: var(--color-soft-green);
+  --color-success-dark: var(--color-green-pastel);
+  --color-warning: var(--color-soft-orange);
+  --color-warning-dark: var(--color-orange-pastel);
+  --color-info: var(--color-soft-purple);
+  --color-info-dark: var(--color-purple-pastel);
+  
+  /* Border Radius */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-full: 9999px;
+  
+  /* Box Shadows */
+  --shadow-2xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-xs: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-sm: 0 2px 4px -1px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+/* Icon Color Utilities - Tailwind v4 way */
+@utility icon-primary {
+  color: var(--color-primary-dark);
+}
+
+@utility icon-secondary {
+  color: var(--color-secondary-dark);
+}
+
+@utility icon-success {
+  color: var(--color-success-dark);
+}
+
+@utility icon-warning {
+  color: var(--color-warning-dark);
+}
+
+@utility icon-info {
+  color: var(--color-info-dark);
+}
+
+/* Icon Container Utilities - Tailwind v4 way */
+@utility icon-container-primary {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  background-color: var(--color-primary);
+}
+
+@utility icon-container-secondary {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  background-color: var(--color-secondary);
+}
+
+@utility icon-container-success {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  background-color: var(--color-success);
+}
+
+@utility icon-container-warning {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  background-color: var(--color-warning);
+}
+
+@utility icon-container-info {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  background-color: var(--color-info);
 }
 
 /* Base styles */

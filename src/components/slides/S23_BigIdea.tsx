@@ -1,6 +1,6 @@
 import SlideWrapper from '@/components/SlideWrapper'
 import { HiOutlineUserGroup, HiOutlineSparkles } from 'react-icons/hi2'
-import { FaCircle, FaHandshake, FaLightbulb } from 'react-icons/fa'
+import { FaHandshake, FaLightbulb } from 'react-icons/fa'
 
 export default function S23_BigIdea() {
   return (

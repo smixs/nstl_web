@@ -1,6 +1,5 @@
 import SlideWrapper from '@/components/SlideWrapper'
-import { HiOutlineGift, HiOutlineHeart } from 'react-icons/hi2'
-import { FaHandsHelping, FaInfinity } from 'react-icons/fa'
+import { FaInfinity } from 'react-icons/fa'
 
 export default function S22_UniqueRTB() {
   return (

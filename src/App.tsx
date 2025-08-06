@@ -8,10 +8,31 @@ export const SlideIndexContext = createContext<number>(0)
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isPrintMode, setIsPrintMode] = useState(false)
 
-  // Навигация с клавиатуры
+  // Print mode detection
+  useEffect(() => {
+    const onBeforePrint = () => setIsPrintMode(true)
+    const onAfterPrint = () => setIsPrintMode(false)
+    
+    window.addEventListener('beforeprint', onBeforePrint)
+    window.addEventListener('afterprint', onAfterPrint)
+    
+    return () => {
+      window.removeEventListener('beforeprint', onBeforePrint)
+      window.removeEventListener('afterprint', onAfterPrint)
+    }
+  }, [])
+
+  // Навигация с клавиатуры с фильтрацией форм
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      // Игнорировать навигацию при вводе в формы
+      const target = e.target as HTMLElement
+      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName) || target.isContentEditable) {
+        return
+      }
+      
       if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
         setCurrentSlide(prev => Math.min(prev + 1, slides.length - 1))
       } else if (e.key === 'ArrowLeft') {
@@ -59,21 +80,26 @@ function App() {
           </div>
         )}
 
-        {/* КРИТИЧНО: Все слайды в DOM для печати! */}
-        {slides.map((SlideComponent, index) => (
-          <SlideIndexContext.Provider key={index} value={index}>
-            <div
-              className={cn(
-                "slide w-full min-h-screen cursor-pointer",
-                "print:static print:block print:!w-[267mm] print:!h-[180mm]",
-                currentSlide === index ? "block" : "hidden"
-              )}
-              onClick={handleClick}
-            >
-              <SlideComponent />
-            </div>
-          </SlideIndexContext.Provider>
-        ))}
+        {/* Рендерим только активный слайд (или все в режиме печати) */}
+        {(isPrintMode ? slides : [slides[currentSlide]]).map((SlideComponent, index) => {
+          const slideIndex = isPrintMode ? index : currentSlide
+          return (
+            <SlideIndexContext.Provider key={slideIndex} value={slideIndex}>
+              <div
+                className={cn(
+                  "slide w-full min-h-screen cursor-pointer",
+                  "print:static print:block print:!w-[267mm] print:!h-[180mm]",
+                  isPrintMode || slideIndex === currentSlide ? "block" : "hidden"
+                )}
+                onClick={handleClick}
+                role="button"
+                aria-label={`Слайд ${slideIndex + 1}`}
+              >
+                <SlideComponent />
+              </div>
+            </SlideIndexContext.Provider>
+          )
+        })}
       </div>
     </BackgroundProvider>
   )
