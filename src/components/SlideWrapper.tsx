@@ -30,15 +30,19 @@ export default function SlideWrapper({
   }
 
   return (
-    <div className={cn(
-      "w-full h-screen flex flex-col overflow-hidden relative",
-      variants[variant],
-      className
-    )}>
+    <div 
+      className={cn(
+        "w-full min-h-screen flex flex-col overflow-hidden relative",
+        "print:min-h-full print:h-full print:overflow-visible",
+        variants[variant],
+        className
+      )}
+      data-slide="true"
+    >
       {/* Random background image - only for default variant */}
       {variant === 'default' && !disableRandomBackground && (
         <div 
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 print:hidden"
           style={{
             backgroundImage: `url(${backgroundImage})`,
             backgroundSize: 'cover',
@@ -62,8 +66,8 @@ export default function SlideWrapper({
       </div>
       
       {/* Main content area */}
-      <div className="flex-1 flex flex-col justify-center px-12 py-8 relative z-10">
-        <div className="max-w-7xl mx-auto w-full">
+      <div className="flex-1 flex flex-col justify-center px-12 py-8 relative z-10 print:px-8 print:py-6">
+        <div className="max-w-7xl mx-auto w-full print:max-w-none">
           {children}
         </div>
       </div>

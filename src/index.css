@@ -373,10 +373,11 @@ p {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* Print styles - CRITICAL for A4 LANDSCAPE! */
+/* Print styles - Comprehensive fix for A4 landscape printing */
 @page {
-  size: 297mm 210mm; /* A4 landscape - width height */
-  margin: 15mm;
+  size: 297mm 210mm; /* A4 landscape exact dimensions */
+  margin: 10mm; /* Smaller margins for more content space */
+  marks: crop cross; /* Optional: add crop marks for professional printing */
 }
 
 /* Special print mode styles (when ?print=true is in URL) */
@@ -384,19 +385,16 @@ p {
   display: block !important;
   position: relative !important;
   opacity: 1 !important;
-  width: 100% !important;
-  max-width: 1920px !important;
-  height: 100vh !important;
-  max-height: 1080px !important;
-  margin: 0 auto !important;
-  padding: 20px !important;
+  width: 277mm !important;
+  height: 190mm !important;
+  margin: 0 auto 20mm !important;
+  padding: 15mm !important;
   page-break-after: always !important;
   page-break-inside: avoid !important;
   box-sizing: border-box !important;
   overflow: hidden !important;
-  
-  /* Scale content to fit */
-  transform-origin: top center !important;
+  background: white !important;
+  transform: none !important;
 }
 
 /* Ensure content fits in print mode */
@@ -407,78 +405,89 @@ p {
 
 .print-mode .slide .grid,
 .print-mode .slide .flex {
-  max-height: calc(100vh - 40px) !important;
+  max-height: 160mm !important;
 }
 
 @media print {
-  /* Reset for print */
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow: visible !important;
-    font-size: 16px !important;
-    line-height: 1.5 !important;
+  /* SIMPLE SOLUTION - Just scale everything down to fit */
+  * {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
   }
 
-  /* Override container */
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  /* CRITICAL - make presentation container show all slides */
   .presentation {
     height: auto !important;
     overflow: visible !important;
-    background: white !important;
   }
 
-  /* Make ALL slides visible and sized for A4 landscape */
+  /* Hide navigation */
+  .progress-bar,
+  .navigation-hint,
+  .fixed,
+  button {
+    display: none !important;
+  }
+
+  /* Make ALL slides visible and scale them down */
   .slide {
     display: block !important;
-    position: static !important;
+    position: relative !important; /* Changed from absolute */
     opacity: 1 !important;
-    width: 267mm !important; /* 297mm - 30mm margins */
-    height: 180mm !important; /* 210mm - 30mm margins */
-    margin: 0 auto;
-    padding: 0;
-    overflow: hidden;
+    visibility: visible !important;
     page-break-after: always;
     page-break-inside: avoid;
-    box-sizing: border-box;
-    background: white !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    width: 100% !important;
+    height: 100vh !important;
+    
+    /* MAIN FIX: Scale down content to 70% to fit everything */
+    transform: scale(0.7) !important;
+    transform-origin: top left !important;
   }
 
   .slide:last-child {
     page-break-after: auto;
   }
 
-  /* Hide navigation elements */
-  .print\:hidden,
-  .fixed,
-  .progress-bar,
-  .navigation-hint,
-  button:not(.print-show) {
-    display: none !important;
-  }
-
-  /* Ensure colors print */
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-    color-adjust: exact !important;
+  /* FIX for competitor slides that get compressed */
+  .flex-grow {
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
   }
   
-  /* Ensure fonts are loaded */
-  .slide * {
-    font-family: 'Poppins', 'Inter', system-ui, -apple-system, sans-serif !important;
-  }
-  
-  /* Ensure images print */
-  img {
-    max-width: 100% !important;
+  .h-full {
     height: auto !important;
-    display: block !important;
+    min-height: 300px !important;
   }
   
-  /* Fix background colors */
-  [class*="bg-"] {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+  .min-h-0 {
+    min-height: 400px !important;
+  }
+  
+  /* Force grids to not compress */
+  .grid {
+    display: grid !important;
+    grid-auto-rows: minmax(150px, auto) !important;
+  }
+  
+  /* Fix flex columns that compress */
+  .flex-col {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  .space-y-4 > * {
+    margin-top: 1rem !important;
   }
 }
 
