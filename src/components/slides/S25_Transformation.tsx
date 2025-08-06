@@ -1,7 +1,7 @@
 import SlideWrapper from '@/components/SlideWrapper'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { HiOutlineHeart, HiOutlineMicrophone, HiOutlineAcademicCap, HiOutlineUsers, HiOutlineArrowTrendingUp, HiOutlineEye, HiOutlineChatBubbleLeftRight, HiOutlineLightBulb, HiOutlineBuildingLibrary, HiOutlineMap } from 'react-icons/hi2'
+import { HiOutlineHeart, HiOutlineUsers, HiOutlineArrowTrendingUp, HiOutlineEye, HiOutlineChatBubbleLeftRight, HiOutlineLightBulb, HiOutlineBuildingLibrary, HiOutlineMap } from 'react-icons/hi2'
 import { FaArrowRight, FaBookmark, FaVideo, FaRobot, FaMicroscope, FaBaby } from 'react-icons/fa'
 
 export default function S25_Transformation() {

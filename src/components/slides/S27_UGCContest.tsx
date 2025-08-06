@@ -1,7 +1,7 @@
 import SlideWrapper from '@/components/SlideWrapper'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { FaTrophy, FaVideo, FaShieldAlt } from 'react-icons/fa'
-import { HiOutlineUserGroup, HiOutlineCheckCircle } from 'react-icons/hi2'
+import { HiOutlineCheckCircle } from 'react-icons/hi2'
 
 export default function S26_UGCContest() {
   return (

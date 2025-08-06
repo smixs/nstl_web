@@ -2,8 +2,8 @@ import SlideWrapper from '@/components/SlideWrapper'
 import ImagePlaceholder from '@/components/ImagePlaceholder'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { HiOutlineChartBar, HiOutlineUsers, HiOutlineChat, HiOutlineShieldCheck } from 'react-icons/hi2'
-import { FaChartLine, FaVideo, FaLanguage, FaShieldAlt, FaExclamationTriangle, FaUsers, FaRegLightbulb, FaBrain, FaBalanceScale, FaChartPie } from 'react-icons/fa'
+import { HiOutlineChartBar } from 'react-icons/hi2'
+import { FaChartLine, FaVideo, FaLanguage, FaShieldAlt, FaExclamationTriangle, FaRegLightbulb } from 'react-icons/fa'
 
 export default function S12_NestlePosition() {
   return (

@@ -1,5 +1,5 @@
 import SlideWrapper from '@/components/SlideWrapper'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 import { HiOutlineCalendar, HiOutlineBell, HiOutlineClock } from 'react-icons/hi2'
 import { FaBaby, FaRobot } from 'react-icons/fa'
 

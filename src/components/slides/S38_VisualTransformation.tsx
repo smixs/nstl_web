@@ -133,7 +133,7 @@ export default function S38_VisualTransformation() {
                 src="/setka1.png"
                 alt="Визуальная трансформация - примеры контента"
                 className="w-full h-auto rounded-lg shadow-md"
-                aspectRatio="21/7"
+                aspectRatio="3/1"
               />
             </CardContent>
           </Card>
