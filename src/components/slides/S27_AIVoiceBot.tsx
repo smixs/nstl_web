@@ -12,10 +12,14 @@ export default function S27_AIVoiceBot() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
             Решение 2: Голосовой AI-помощник
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center">
-            <span className="font-semibold block">Проблема:</span>
-            мамам нужно быстрое решение возникающих проблем с малышом. Мама всегда занята, у неё нет времени долго искать и читать статьи.
-          </p>
+          <p className="text-lg font-semibold text-gray-600">Проблема:</p>
+          <div className="flex justify-center">
+            <div className="max-w-3xl">
+              <p className="text-lg text-gray-600 text-center">
+                мамам нужно быстрое решение возникающих проблем с малышом. Мама всегда занята, у неё нет времени долго искать и читать статьи.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Solution */}

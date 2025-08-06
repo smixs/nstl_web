@@ -50,6 +50,59 @@ This file provides guidance to Claude Code (claude.ai/code) when working with th
    }
    ```
 
+#### **🔥 КРИТИЧЕСКОЕ: CONTAINER ПЕРЕМЕННЫЕ ДЛЯ MAX-WIDTH**
+
+**ПРОБЛЕМА**: В Tailwind CSS v4 классы `max-w-3xl`, `max-w-4xl` и т.д. НЕ РАБОТАЮТ без определения container переменных!
+
+**ОБЯЗАТЕЛЬНО добавить в @theme блок index.css:**
+```css
+@theme {
+  /* Container widths - БЕЗ НИХ max-w-* НЕ РАБОТАЮТ!!! */
+  --container-3xs: 16rem;
+  --container-2xs: 18rem;
+  --container-xs: 20rem;
+  --container-sm: 24rem;
+  --container-md: 28rem;
+  --container-lg: 32rem;
+  --container-xl: 36rem;
+  --container-2xl: 42rem;
+  --container-3xl: 48rem;
+  --container-4xl: 56rem;
+  --container-5xl: 64rem;
+  --container-6xl: 72rem;
+  --container-7xl: 80rem;
+}
+```
+
+#### **💡 ПРАВИЛЬНОЕ ЦЕНТРИРОВАНИЕ ТЕКСТА С ОГРАНИЧЕНИЕМ ШИРИНЫ**
+
+**НЕПРАВИЛЬНО** (текст уедет влево):
+```tsx
+<p className="text-lg text-gray-600 max-w-3xl mx-auto text-center">
+  Текст который должен быть центрирован
+</p>
+```
+
+**ПРАВИЛЬНО** (используй контейнер):
+```tsx
+<div className="flex justify-center">
+  <div className="max-w-3xl">
+    <p className="text-lg text-gray-600 text-center">
+      Текст который должен быть центрирован
+    </p>
+  </div>
+</div>
+```
+
+**АЛЬТЕРНАТИВА** (тоже правильно):
+```tsx
+<div className="max-w-3xl mx-auto">
+  <p className="text-lg text-gray-600 text-center">
+    Текст который должен быть центрирован
+  </p>
+</div>
+```
+
 3. **CSS переменные напрямую вместо theme()**
    ```css
    /* ПРАВИЛЬНО - Tailwind v4 */

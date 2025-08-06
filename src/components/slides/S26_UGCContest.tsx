@@ -12,10 +12,14 @@ export default function S26_UGCContest() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
             Решение 1: Конкурс на амбассадора UGC
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center">
-            <span className="font-semibold block">Проблема:</span>
-            Инфлюенсеры дорогие и нестабильные. Долгосрочные отношения с "мамочками" сложно поддерживать - дети вырастают, лояльность невысокая.
-          </p>
+          <p className="text-lg font-semibold text-gray-600">Проблема:</p>
+          <div className="flex justify-center">
+            <div className="max-w-3xl">
+              <p className="text-lg text-gray-600 text-center">
+                Инфлюенсеры дорогие и нестабильные. Долгосрочные отношения с "мамочками" сложно поддерживать - дети вырастают, лояльность невысокая.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Insight */}
