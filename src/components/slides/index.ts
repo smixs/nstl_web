@@ -29,9 +29,24 @@ import S26_UGCContest from './S26_UGCContest'
 import S27_AIVoiceBot from './S27_AIVoiceBot'
 import S28_Personalization from './S28_Personalization'
 import S29_GenerationsContent from './S29_GenerationsContent'
+import S30_ToneOfVoice from './S30_ToneOfVoice'
 import S30_Block4Divider from './S30_Block4Divider'
+import S31_ContentRubrics from './S31_ContentRubrics'
+import S32_InstagramFormats from './S32_InstagramFormats'
+import S33_TelegramStrategy from './S33_TelegramStrategy'
+import S34_DoctorsStrategy from './S34_DoctorsStrategy'
+import S35_CreativeExamples from './S35_CreativeExamples'
+import S36_CommunityManagement from './S36_CommunityManagement'
+import S37_VisualTransformation from './S37_VisualTransformation'
+import S38_EngagementMechanics from './S38_EngagementMechanics'
 import S38_Block5Divider from './S38_Block5Divider'
+import S39_UGCSafety from './S39_UGCSafety'
+import S40_RiskProtection from './S40_RiskProtection'
+import S41_ComplianceProcess from './S41_ComplianceProcess'
 import S41_Block6Divider from './S41_Block6Divider'
+import S42_KPILadder from './S42_KPILadder'
+import S43_QualityMetrics from './S43_QualityMetrics'
+import S44_90DayPlan from './S44_90DayPlan'
 
 export const slides = [
   S01_Title,
@@ -65,8 +80,23 @@ export const slides = [
   S27_AIVoiceBot,
   S28_Personalization,
   S29_GenerationsContent,
+  S30_ToneOfVoice,
+  S31_ContentRubrics,
+  S32_InstagramFormats,
+  S33_TelegramStrategy,
+  S34_DoctorsStrategy,
+  S35_CreativeExamples,
+  S36_CommunityManagement,
+  S37_VisualTransformation,
+  S38_EngagementMechanics,
   S30_Block4Divider,
+  S39_UGCSafety,
+  S40_RiskProtection,
+  S41_ComplianceProcess,
   S38_Block5Divider,
+  S42_KPILadder,
+  S43_QualityMetrics,
+  S44_90DayPlan,
   S41_Block6Divider,
 ] as const
 
@@ -102,7 +132,22 @@ export const slideNames = [
   'Решение 2: Голосовой AI-помощник',
   'Решение 3: Персонализация',
   'Решение 4: Контент поколений',
+  'Tone of Voice',
+  'Контентные рубрики',
+  'Форматы для Instagram',
+  'Telegram-стратегия',
+  'Работа с педиатрами',
+  'Примеры креативов',
+  'Community Management 3.0',
+  'Визуальная трансформация',
+  'Механики вовлечения',
   'Блок 4: Тактическая реализация',
+  'Система безопасности UGC',
+  'Защита от рисков',
+  'Compliance процесс',
   'Блок 5: Безопасность и контроль',
+  'KPI лестница',
+  'Как измеряем качество',
+  '90-дневный план',
   'Блок 6: Метрики и результаты',
 ] as const
