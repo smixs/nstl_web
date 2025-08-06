@@ -379,18 +379,52 @@ p {
   margin: 15mm;
 }
 
+/* Special print mode styles (when ?print=true is in URL) */
+.print-mode .slide {
+  display: block !important;
+  position: relative !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  max-width: 1920px !important;
+  height: 100vh !important;
+  max-height: 1080px !important;
+  margin: 0 auto !important;
+  padding: 20px !important;
+  page-break-after: always !important;
+  page-break-inside: avoid !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  
+  /* Scale content to fit */
+  transform-origin: top center !important;
+}
+
+/* Ensure content fits in print mode */
+.print-mode .slide > div {
+  max-height: 100% !important;
+  overflow: hidden !important;
+}
+
+.print-mode .slide .grid,
+.print-mode .slide .flex {
+  max-height: calc(100vh - 40px) !important;
+}
+
 @media print {
   /* Reset for print */
   html, body {
     margin: 0;
     padding: 0;
     overflow: visible !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
   }
 
   /* Override container */
   .presentation {
     height: auto !important;
     overflow: visible !important;
+    background: white !important;
   }
 
   /* Make ALL slides visible and sized for A4 landscape */
@@ -406,6 +440,7 @@ p {
     page-break-after: always;
     page-break-inside: avoid;
     box-sizing: border-box;
+    background: white !important;
   }
 
   .slide:last-child {
@@ -414,14 +449,36 @@ p {
 
   /* Hide navigation elements */
   .print\:hidden,
-  .fixed {
+  .fixed,
+  .progress-bar,
+  .navigation-hint,
+  button:not(.print-show) {
     display: none !important;
   }
 
   /* Ensure colors print */
   * {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  
+  /* Ensure fonts are loaded */
+  .slide * {
+    font-family: 'Poppins', 'Inter', system-ui, -apple-system, sans-serif !important;
+  }
+  
+  /* Ensure images print */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+  
+  /* Fix background colors */
+  [class*="bg-"] {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 }
 

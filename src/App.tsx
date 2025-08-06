@@ -1,6 +1,7 @@
 import { useState, useEffect, createContext } from 'react'
 import { slides } from '@/components/slides'
 import ProgressBar from '@/components/ProgressBar'
+import PDFDownloadMenu from '@/components/PDFDownloadMenu'
 import { cn } from '@/lib/utils'
 import { BackgroundProvider } from '@/contexts/BackgroundContext'
 
@@ -10,8 +11,15 @@ function App() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isPrintMode, setIsPrintMode] = useState(false)
 
-  // Print mode detection
+  // Print mode detection (from URL parameter or browser print event)
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const printParam = params.get('print')
+    
+    if (printParam === 'true') {
+      setIsPrintMode(true)
+    }
+    
     const onBeforePrint = () => setIsPrintMode(true)
     const onAfterPrint = () => setIsPrintMode(false)
     
@@ -69,12 +77,15 @@ function App() {
 
   return (
     <BackgroundProvider totalSlides={slides.length}>
-      <div className="presentation min-h-screen bg-white">
+      <div className={cn("presentation min-h-screen bg-white", isPrintMode && "print-mode")}>
         {/* Прогресс бар */}
-        <ProgressBar current={currentSlide} total={slides.length} />
+        {!isPrintMode && <ProgressBar current={currentSlide} total={slides.length} />}
+        
+        {/* PDF Download Menu */}
+        {!isPrintMode && <PDFDownloadMenu />}
         
         {/* Подсказка навигации на первом слайде */}
-        {currentSlide === 0 && (
+        {currentSlide === 0 && !isPrintMode && (
           <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-6 py-3 rounded-full text-sm print:hidden animate-pulse">
             Используйте стрелки ← → или кликните для навигации
           </div>

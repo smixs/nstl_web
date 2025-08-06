@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
+    "server": "node server/index.js",
+    "server:16x9": "node server/pdf-generator-16x9.js",
+    "dev:all": "npm run dev & npm run server & npm run server:16x9",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
@@ -29,7 +32,10 @@
     "@radix-ui/react-progress": "^1.1.7",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "lucide-react": "^0.536.0",
+    "puppeteer": "^24.15.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
