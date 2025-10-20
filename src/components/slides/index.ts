@@ -30,6 +30,7 @@ import S27_UGCContest from './S27_UGCContest'
 import S28_AIVoiceBot from './S28_AIVoiceBot'
 import S29_Personalization from './S29_Personalization'
 import S30_GenerationsContent from './S30_GenerationsContent'
+import S30_BabyMeBroadcast from './S30_BabyMeBroadcast'
 import S31_ToneOfVoice from './S31_ToneOfVoice'
 import S31_Block4Divider from './S31_Block4Divider'
 import S32_ContentRubrics from './S32_ContentRubrics'
@@ -83,6 +84,7 @@ export const slides = [
   S28_AIVoiceBot,
   S29_Personalization,
   S30_GenerationsContent,
+  S30_BabyMeBroadcast,
   S31_ToneOfVoice,
   S31_Block4Divider,
   S32_ContentRubrics,
@@ -137,6 +139,7 @@ export const slideNames = [
   'Решение 2: Голосовой AI-помощник',
   'Решение 3: Персонализация',
   'Решение 4: Контент поколений',
+  'Baby&Me Broadcast',
   'Tone of Voice',
   'Блок 4: Тактическая реализация',
   'Контентные рубрики',
