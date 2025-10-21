@@ -84,7 +84,7 @@ export default function S09_LeadersAnatomy() {
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-600">Followers</span>
-                  <span className="text-sm font-medium">52K</span>
+                  <span className="text-sm font-medium">5,2K</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-600">Reels доля</span>
@@ -132,7 +132,7 @@ export default function S09_LeadersAnatomy() {
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-600">Followers</span>
-                  <span className="text-sm font-medium">89K</span>
+                  <span className="text-sm font-medium">8,9K</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-600">Reels доля</span>
