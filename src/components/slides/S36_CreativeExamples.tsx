@@ -34,7 +34,7 @@ export default function S35_CreativeExamples() {
             </CardHeader>
             <CardContent>
               <p className="text-base font-semibold text-gray-800 text-center mb-3">
-                "Бабушка, мама и я выбираем NAN"
+                "Моя мама, и я-мама выбираем NAN"
               </p>
               <div className="bg-gray-50 rounded-lg p-3">
                 <p className="text-sm text-gray-600 text-center">

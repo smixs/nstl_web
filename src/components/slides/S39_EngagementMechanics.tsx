@@ -71,7 +71,7 @@ export default function S38_EngagementMechanics() {
                 Тематические активности
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
-                <li>• #МамаБабушкаИЯ</li>
+                <li>• #Моямамаия</li>
                 <li>• #КругДоверияBabyMe</li>
                 <li>• #25ЛетВместе</li>
                 <li>• #ПоколенияNestle</li>

@@ -54,7 +54,7 @@ export default function S26_UGCContest() {
             </CardHeader>
             <CardContent>
               <p className="text-base text-gray-700 font-semibold mb-2">
-                "Мама, бабушка и я" — 3 поколения в одном видео
+                "Моя мама, я - мама и мой ребенок" — 3 поколения в одном видео
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>• Бабушка рассказывает, как кормила дочь</li>
